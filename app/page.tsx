@@ -300,12 +300,16 @@ export default function Home() {
           rel="noopener noreferrer" 
           className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
         >
-          <div className="w-5 h-5 relative transition-all duration-300 group-hover:brightness-125">
+          <div className="w-5 h-5 relative group-hover:text-green-400 transition-all duration-300">
             <Image
               src="/dexscreener.png"
               alt="DexScreener"
               fill
-              className="object-contain"
+              className="object-contain group-hover:brightness-125 group-hover:filter-green transition-all duration-300"
+              style={{
+                filter: 'brightness(1) sepia(1) hue-rotate(70deg) saturate(3)',
+                opacity: '0.8'
+              }}
               priority
             />
           </div>

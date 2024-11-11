@@ -53,7 +53,7 @@ const MobilePage = () => {
           {/* Header Info */}
           <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
             <div className="flex flex-col gap-2">
-              <span className="text-green-400 font-bold text-xs">
+              <span className="text-green-400 font-bold text-[9px]">
                 ORCA MONSTA - DEVELOPED BY{' '}
                 <a 
                   href="https://x.com/STACCoverflow" 
@@ -125,13 +125,17 @@ const MobilePage = () => {
         </div>
 
         {/* Banner Image */}
-        <div className="relative w-full h-48">
-          <Image
-            src="/orcabanner.jpg"
-            alt="Orca Banner"
-            fill
-            className="object-cover rounded-xl opacity-60"
-          />
+        <div className="relative w-full">
+          <div className="relative w-full portrait:h-48 landscape:h-72">
+            <Image
+              src="/orcabanner.jpg"
+              alt="Orca Banner"
+              fill
+              className="object-cover rounded-xl opacity-60"
+              sizes="(orientation: portrait) 100vw, (orientation: landscape) 100vw"
+              priority
+            />
+          </div>
         </div>
 
         {/* Main Content */}
