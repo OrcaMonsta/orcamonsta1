@@ -278,7 +278,7 @@ export default function Home() {
           <div id="dexscreener-embed" className="rounded-xl overflow-hidden">
             <iframe 
               src="https://dexscreener.com/solana/6wSRYHNg1C7T9S5cSqXCijxmiVBMu8P8dMH9ckUhEW2A?embed=1&theme=dark"
-              className="w-full h-[500px] border-0"
+              className="w-full h-[400px] border-0"
               style={{
                 borderRadius: '12px',
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
