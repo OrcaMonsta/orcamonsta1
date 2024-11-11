@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import localFont from 'next/font/local'
 
@@ -10,6 +10,37 @@ const cornerstone = localFont({
 })
 
 export default function UnderConstruction() {
+  const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
+  const [email, setEmail] = useState('');
+
+  const toggleFeature = (feature: string) => {
+    setSelectedFeatures(prev => 
+      prev.includes(feature) 
+        ? prev.filter(f => f !== feature)
+        : [...prev, feature]
+    );
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const subject = "Orca Monsta Updates Request";
+    const body = `
+      Hi, I'm interested in updates about Orca Monsta!
+      
+      Selected Features:
+      ${selectedFeatures.length > 0 
+        ? selectedFeatures.join(', ')
+        : 'All features'}
+      
+      Please keep me updated on these developments.
+      
+      Email: ${email}
+    `.trim();
+
+    window.location.href = `mailto:OrcaMonsta@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Animated Background Effect */}
@@ -82,23 +113,33 @@ export default function UnderConstruction() {
           {/* Features Coming Soon */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {['DEFI', 'STAKING', 'FARMING', 'REWARDS'].map((feature, index) => (
-              <div key={index} className="flex items-center justify-center p-3
-                bg-white/5 rounded-lg border border-gray-800/50">
-                <span className={`${cornerstone.className} text-cyan-400`}>{feature}</span>
-              </div>
+              <button
+                key={index}
+                onClick={() => toggleFeature(feature)}
+                className={`flex items-center justify-center p-3
+                  rounded-lg border transition-all duration-300
+                  ${selectedFeatures.includes(feature)
+                    ? 'bg-cyan-500/20 border-cyan-500/50 shadow-[0_0_20px_rgba(0,255,255,0.2)] animate-pulse'
+                    : 'bg-white/5 border-gray-800/50 hover:bg-white/10 hover:border-gray-700/50'
+                  }`}
+              >
+                <span className={`${cornerstone.className} 
+                  ${selectedFeatures.includes(feature) ? 'text-cyan-300' : 'text-cyan-400'}`}>
+                  {feature}
+                </span>
+              </button>
             ))}
           </div>
 
           {/* Notification Form */}
           <form 
-            action="mailto:OrcaMonsta@proton.me" 
-            method="post" 
-            encType="text/plain"
+            onSubmit={handleSubmit}
             className="flex gap-2"
           >
             <input 
               type="email"
-              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="ENTER YOUR EMAIL"
               className="flex-1 bg-black/30 rounded-lg border border-gray-800/50 px-4 py-2
                 focus:outline-none focus:border-cyan-500/50 transition-colors"
@@ -108,6 +149,7 @@ export default function UnderConstruction() {
               type="submit"
               className="px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
                 border border-cyan-500/50 rounded-lg hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] 
+                active:shadow-[0_0_50px_rgba(0,255,255,0.4)]
                 transition-all duration-300"
             >
               NOTIFY ME
