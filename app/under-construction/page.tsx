@@ -12,6 +12,7 @@ const cornerstone = localFont({
 export default function UnderConstruction() {
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const toggleFeature = (feature: string) => {
     setSelectedFeatures(prev => 
@@ -26,16 +27,18 @@ export default function UnderConstruction() {
     
     const subject = "Orca Monsta Updates Request";
     const body = `
-      Hi, I'm interested in updates about Orca Monsta!
+      Hi Orca Monsta team!
       
-      Selected Features:
-      ${selectedFeatures.length > 0 
-        ? selectedFeatures.join(', ')
-        : 'All features'}
+      I'm interested in the following features:
+      ${selectedFeatures.join(', ')}
       
-      Please keep me updated on these developments.
+      ${selectedFeatures.includes('OTHER') ? `Additional request/message:
+      ${message}
       
-      Email: ${email}
+      ` : ''}
+      My email: ${email}
+      
+      Looking forward to updates!
     `.trim();
 
     window.location.href = `mailto:OrcaMonsta@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -135,26 +138,46 @@ export default function UnderConstruction() {
           {/* Notification Form */}
           <form 
             onSubmit={handleSubmit}
-            className="flex gap-2"
+            className="flex flex-col gap-4 w-full"
           >
-            <input 
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="ENTER YOUR EMAIL"
-              className="flex-1 bg-black/30 rounded-lg border border-gray-800/50 px-4 py-2
-                focus:outline-none focus:border-cyan-500/50 transition-colors"
-              required
-            />
-            <button 
-              type="submit"
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
-                border border-cyan-500/50 rounded-lg hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] 
-                active:shadow-[0_0_50px_rgba(0,255,255,0.4)]
-                transition-all duration-300"
-            >
-              NOTIFY US
-            </button>
+            {selectedFeatures.includes('OTHER') && (
+              <div className="w-full">
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Please tell us what features you'd like to see... (max 500 characters)"
+                  maxLength={500}
+                  className="w-full bg-black/30 rounded-lg border border-gray-800/50 px-4 py-2
+                    focus:outline-none focus:border-cyan-500/50 transition-colors resize-none h-32
+                    placeholder:text-gray-500"
+                  style={{ fontFamily: 'inherit' }}
+                />
+                <div className="text-right text-sm text-gray-400 mt-1">
+                  {500 - message.length} characters remaining
+                </div>
+              </div>
+            )}
+            
+            <div className="flex gap-2">
+              <input 
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="ENTER YOUR EMAIL"
+                className="flex-1 bg-black/30 rounded-lg border border-gray-800/50 px-4 py-2
+                  focus:outline-none focus:border-cyan-500/50 transition-colors"
+                required
+              />
+              <button 
+                type="submit"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
+                  border border-cyan-500/50 rounded-lg hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] 
+                  active:shadow-[0_0_50px_rgba(0,255,255,0.4)]
+                  transition-all duration-300"
+              >
+                NOTIFY US
+              </button>
+            </div>
           </form>
 
           {/* Social Links */}
