@@ -36,34 +36,60 @@ const MobilePage = () => {
 
       {/* Content Sections - Stacked Vertically */}
       <div className="relative z-10 px-4 py-6 flex flex-col gap-8">
-        {/* Header/Contract Info */}
-        <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
-          <div className="flex flex-col gap-2">
-            <span className="text-green-400 font-bold">
-              ORCA MONSTA - DEVELOPED BY{' '}
-              <a 
-                href="https://x.com/STACCoverflow" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-green-300 transition-colors duration-300"
-              >
-                @STACCOVERFLOW
-              </a>
-            </span>
-            <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <span>CONTRACT:</span>
-              <button onClick={copyToClipboard} className="flex items-center gap-1 group">
-                <span className="font-mono text-xs relative group-hover:text-green-400 transition-colors duration-300">
-                  {contractAddress}
-                  <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-green-500 text-white text-xs rounded 
-                    transition-all duration-300 ${copied ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-                    Copied!
+        {/* Header/Contract Info with Menu */}
+        <div className="flex flex-col gap-4">
+          {/* Header Info */}
+          <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
+            <div className="flex flex-col gap-2">
+              <span className="text-green-400 font-bold text-sm">
+                ORCA MONSTA - DEVELOPED BY{' '}
+                <a 
+                  href="https://x.com/STACCoverflow" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-green-300 transition-colors duration-300"
+                >
+                  @STACCOVERFLOW
+                </a>
+              </span>
+              <div className="flex items-center gap-2 text-gray-400">
+                <span className="text-xs">CONTRACT:</span>
+                <button onClick={copyToClipboard} className="flex items-center gap-1 group">
+                  <span className="font-mono text-[10px] relative group-hover:text-green-400 transition-colors duration-300">
+                    {contractAddress}
+                    <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-green-500 text-white text-xs rounded 
+                      transition-all duration-300 ${copied ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+                      Copied!
+                    </span>
                   </span>
-                </span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
-                </svg>
-              </button>
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Menu Items */}
+          <div className="backdrop-blur-md bg-black/30 rounded-xl border border-gray-800/50 overflow-hidden">
+            <div className="py-2">
+              {menuItems.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
+                >
+                  {/* Animated hover effect for each item */}
+                  <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
+                    scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                  
+                  <span className="relative z-10 flex items-center gap-2 text-sm"> {/* Added text-sm for smaller text */}
+                    {item.name}
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                      text-cyan-400">→</span>
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
         </div>
