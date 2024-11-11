@@ -53,16 +53,19 @@ const MobilePage = () => {
           {/* Header Info */}
           <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
             <div className="flex flex-col gap-2">
-              <span className="text-green-400 font-bold text-[9px]">
-                ORCA MONSTA - DEVELOPED BY{' '}
-                <a 
-                  href="https://x.com/STACCoverflow" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-green-300 transition-colors duration-300"
-                >
-                  @STACCOVERFLOW
-                </a>
+              <span className="text-green-400 font-bold">
+                <span className="text-[11px]">ORCA MONSTA</span>{' - '}
+                <span className="text-[9px]">
+                  DEVELOPED BY{' '}
+                  <a 
+                    href="https://x.com/STACCoverflow" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-green-300 transition-colors duration-300"
+                  >
+                    @STACCOVERFLOW
+                  </a>
+                </span>
               </span>
               <div className="flex items-center gap-2 text-gray-400">
                 <span className="text-xs">CONTRACT:</span>
@@ -126,14 +129,17 @@ const MobilePage = () => {
 
         {/* Banner Image */}
         <div className="relative w-full">
-          <div className="relative w-full portrait:h-48 landscape:h-72">
+          <div className="relative w-full h-[30vh] md:h-[40vh]">
             <Image
               src="/orcabanner.jpg"
               alt="Orca Banner"
               fill
-              className="object-cover rounded-xl opacity-60"
-              sizes="(orientation: portrait) 100vw, (orientation: landscape) 100vw"
+              className="object-cover object-center rounded-xl opacity-60"
+              sizes="100vw"
               priority
+              style={{
+                maxHeight: '400px'
+              }}
             />
           </div>
         </div>
