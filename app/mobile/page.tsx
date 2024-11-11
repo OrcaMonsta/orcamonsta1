@@ -134,7 +134,7 @@ const MobilePage = () => {
               src="/orcabanner.jpg"
               alt="Orca Banner"
               fill
-              className="object-contain portrait:scale-75 landscape:object-cover rounded-xl opacity-60"
+              className="object-contain portrait:scale-[0.9] landscape:object-cover rounded-xl opacity-60"
               sizes="100vw"
               priority
               style={{

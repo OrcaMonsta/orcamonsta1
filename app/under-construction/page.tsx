@@ -107,12 +107,13 @@ export default function UnderConstruction() {
           transform transition-all duration-300 max-w-2xl w-full text-center">
           <p className={`${cornerstone.className} text-xl text-gray-300 mb-6`}>
             WE ARE WORKING HARD TO BRING YOU SOMETHING AMAZING.
-            THIS PAGE WILL BE AVAILABLE SOON!
+            THIS PAGE WILL BE AVAILABLE SOON! 
+            PLEASE EMAIL US WITH ANY QUESTIONS OR REQUESTS YOU MAY HAVE.
           </p>
           
           {/* Features Coming Soon */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            {['DEFI', 'STAKING', 'FARMING', 'REWARDS'].map((feature, index) => (
+            {['NFTS', 'STAKING', 'REWARDS', 'OTHER'].map((feature, index) => (
               <button
                 key={index}
                 onClick={() => toggleFeature(feature)}
@@ -157,7 +158,7 @@ export default function UnderConstruction() {
           </form>
 
           {/* Social Links */}
-          <div className="mt-8 flex gap-6">
+          <div className="mt-8 flex justify-center gap-6">
             <a 
               href="https://x.com/OrcaMonsta" 
               target="_blank" 
