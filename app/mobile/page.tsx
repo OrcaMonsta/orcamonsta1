@@ -129,17 +129,14 @@ const MobilePage = () => {
 
         {/* Banner Image */}
         <div className="relative w-full">
-          <div className="relative w-full h-[30vh] md:h-[40vh]">
+          <div className="relative w-full portrait:h-48 landscape:h-72">
             <Image
               src="/orcabanner.jpg"
               alt="Orca Banner"
               fill
-              className="object-cover object-center rounded-xl opacity-60"
-              sizes="100vw"
+              className="object-cover rounded-xl opacity-60"
+              sizes="(orientation: portrait) 100vw, (orientation: landscape) 100vw"
               priority
-              style={{
-                maxHeight: '400px'
-              }}
             />
           </div>
         </div>
