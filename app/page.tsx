@@ -163,12 +163,14 @@ export default function Home() {
         <h1 className={`${cornerstone.className} text-2xl font-bold mb-4 text-shadow-lg`}>
           STEP INTO THE TRENCHES AND GET AN EXCLUSIVE LOOK AT THE MAKING OF $ORCA
         </h1>
-        <p className={`${cornerstone.className} text-sm mb-6 text-shadow-lg`}>
-          BEST EXPERIENCED ON A MOBILE DEVICE
-        </p>
-        <button className={`${cornerstone.className} border border-white px-8 py-2 hover:bg-white hover:text-black transition-colors backdrop-blur-sm`}>
-          START
-        </button>
+        <a 
+          href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${cornerstone.className} inline-block border border-white px-8 py-2 hover:bg-white hover:text-black transition-colors backdrop-blur-sm`}
+        >
+          BUY $ORCA
+        </a>
       </div>
 
       {/* 3D Rotating Cards Container */}
@@ -199,7 +201,7 @@ export default function Home() {
               title: "EASY",
               description: "BROUGHT TO YOU ON THE SOLANA NETWORK, PROVIDING SEAMLESS AND SECURE TX'S. USE YOUR FAVORITE WALLET PROVIDER TO HODL ORCA MONSTA TODAY!",
               icon: (
-                <svg className="w-12 h-12 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
                     d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -209,7 +211,7 @@ export default function Home() {
               title: "TECHNOLOGY",
               description: "BUILT ON SOLANA'S CUTTING-EDGE BLOCKCHAIN, FEATURING AUTOMATED SMART CONTRACTS, ADVANCED TOKENOMICS AND OUR OWN REVOLUTIONARY, NEVER BEFORE SEEN TECHNOLOGY.",
               icon: (
-                <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
