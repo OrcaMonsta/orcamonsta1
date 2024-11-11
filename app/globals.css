@@ -13,9 +13,15 @@ body {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
@@ -44,8 +50,12 @@ iframe::-webkit-scrollbar-thumb {
 }
 
 @keyframes slow-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .animate-slow-spin {
@@ -61,8 +71,12 @@ iframe::-webkit-scrollbar-thumb {
 }
 
 @keyframes rotate3d {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(-360deg); }
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
 }
 
 .animate-3d-spin {
