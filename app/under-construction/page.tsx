@@ -152,7 +152,7 @@ export default function UnderConstruction() {
                 active:shadow-[0_0_50px_rgba(0,255,255,0.4)]
                 transition-all duration-300"
             >
-              NOTIFY ME
+              NOTIFY US
             </button>
           </form>
 
