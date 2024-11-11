@@ -52,7 +52,7 @@ export default function Home() {
       </div>
 
       {/* Contract Info Banner */}
-      <div className="absolute top-[38px] left-40 hidden md:flex items-center gap-4 z-20">
+      <div className="absolute top-[38px] left-40 flex items-center gap-4 z-20">
         <div className="backdrop-blur-md bg-black/30 rounded-xl px-6 py-2.5 border border-gray-800/50 
           shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
           transform transition-all duration-300">
@@ -87,30 +87,6 @@ export default function Home() {
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Contract Info */}
-      <div className="absolute top-4 left-4 right-4 flex md:hidden items-center justify-between z-20">
-        <div className="backdrop-blur-md bg-black/30 rounded-xl px-3 py-2 border border-gray-800/50 
-          shadow-[0_0_50px_rgba(0,255,255,0.1)] w-full">
-          <div className="flex flex-col gap-2">
-            <span className="text-green-400 font-bold text-sm">ORCA MONSTA</span>
-            <div className="flex items-center gap-2 text-gray-400 text-xs">
-              <span>CONTRACT:</span>
-              <button 
-                onClick={copyToClipboard}
-                className="flex items-center gap-1 group"
-              >
-                <span className="font-mono relative group-hover:text-green-400 transition-colors duration-300 truncate w-32">
-                  {contractAddress}
-                </span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
                 </svg>
               </button>
@@ -164,8 +140,8 @@ export default function Home() {
         )}
       </div>
 
-      {/* Background Banner */}
-      <div className="absolute top-0 right-0 w-full md:w-1/2">
+      {/* Background Banner - half page width, full height */}
+      <div className="absolute top-0 right-0 w-1/2">
         <Image
           src="/orcabanner.jpg"
           alt="Orca Banner"
@@ -183,7 +159,7 @@ export default function Home() {
       </div>
 
       {/* Right side content */}
-      <div className="absolute right-4 md:right-10 top-1/4 md:top-1/3 max-w-md z-10 px-4 md:px-0">
+      <div className="absolute right-10 top-1/3 max-w-md z-10">
         <h1 className={`${cornerstone.className} text-2xl font-bold mb-4 text-shadow-lg`}>
           STEP INTO THE TRENCHES AND GET AN EXCLUSIVE LOOK AT THE MAKING OF $ORCA
         </h1>
@@ -196,7 +172,7 @@ export default function Home() {
       </div>
 
       {/* 3D Rotating Cards Container */}
-      <div className="absolute right-0 md:right-20 bottom-0 md:bottom-14 w-full md:w-[540px] h-[270px] preserve-3d perspective overflow-hidden">
+      <div className="absolute right-20 bottom-14 w-[540px] h-[270px] preserve-3d perspective">
         <div className="relative w-full h-full animate-3d-spin">
           {[
             {
@@ -272,8 +248,8 @@ export default function Home() {
       </div>
 
       {/* DEXScreener Chart */}
-      <div className="absolute bottom-4 left-4 right-4 md:bottom-20 md:left-20 md:w-[800px] group">
-        <div className="relative bg-black/30 rounded-2xl p-4 md:p-8 border border-gray-800/50 
+      <div className="absolute bottom-20 left-20 w-[800px] group">
+        <div className="relative bg-black/30 rounded-2xl p-8 border border-gray-800/50 
           shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
           transition-all duration-300 transform hover:scale-105
           overflow-hidden">
@@ -315,7 +291,7 @@ export default function Home() {
       </div>
 
       {/* Social Links */}
-      <div className="absolute bottom-4 right-4 md:bottom-10 md:right-10 flex gap-4 md:gap-6">
+      <div className="absolute bottom-10 right-10 flex gap-6">
         <a 
           href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
           target="_blank" 
