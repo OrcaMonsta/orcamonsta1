@@ -172,7 +172,7 @@ export default function Home() {
       </div>
 
       {/* 3D Rotating Cards Container */}
-      <div className="absolute right-20 bottom-14 w-[540px] h-[270px] preserve-3d perspective">
+      <div className="absolute right-20 bottom-14 w-[675px] h-[337px] preserve-3d perspective">
         <div className="relative w-full h-full animate-3d-spin">
           {[
             {
@@ -218,26 +218,26 @@ export default function Home() {
           ].map((card, index) => (
             <div
               key={index}
-              className={`absolute left-1/2 -translate-x-1/2 w-[180px] transform-style-3d`}
+              className={`absolute left-1/2 -translate-x-1/2 w-[225px] transform-style-3d`}
               style={{
-                transform: `rotateY(${index * 90}deg) translateZ(168px)`
+                transform: `rotateY(${index * 90}deg) translateZ(210px)`
               }}
             >
-              <div className="backdrop-blur-md bg-black/30 rounded-xl p-3 border border-gray-800/50 
+              <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50 
                 shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
-                h-[204px] transform transition-all duration-300">
+                h-[255px] transform transition-all duration-300">
                 <div className="relative z-10">
-                  <div className="flex items-center gap-1 mb-2">
+                  <div className="flex items-center gap-2 mb-3">
                     <div className="flex-shrink-0">
                       {React.cloneElement(card.icon as React.ReactElement, { 
-                        className: "w-6 h-6 text-green-400 mb-1"
+                        className: "w-8 h-8 text-green-400 mb-2"
                       })}
                     </div>
-                    <h3 className={`${cornerstone.className} text-sm font-bold text-green-400`}>
+                    <h3 className={`${cornerstone.className} text-base font-bold text-green-400`}>
                       {card.title}
                     </h3>
                   </div>
-                  <p className={`${cornerstone.className} text-[10px] text-gray-300 leading-tight`}>
+                  <p className={`${cornerstone.className} text-xs text-gray-300 leading-relaxed`}>
                     {card.description}
                   </p>
                 </div>
