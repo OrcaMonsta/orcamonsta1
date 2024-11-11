@@ -189,7 +189,7 @@ export default function Home() {
               title: "APPRECIATING ASSET",
               description: "ENJOY THE INHERENT APPRECIATION OF ORCA MONSTA AS BURN FUNCTIONS CONTINUALLY REDUCE THE AMOUNTS OF ORCA MONSTA IN CIRCULATION.",
               icon: (
-                <svg className="w-12 h-12 text-cyan-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
                     d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
@@ -209,7 +209,7 @@ export default function Home() {
               title: "TECHNOLOGY",
               description: "BUILT ON SOLANA'S CUTTING-EDGE BLOCKCHAIN, FEATURING AUTOMATED SMART CONTRACTS, ADVANCED TOKENOMICS AND OUR OWN REVOLUTIONARY, NEVER BEFORE SEEN TECHNOLOGY.",
               icon: (
-                <svg className="w-12 h-12 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
@@ -237,7 +237,7 @@ export default function Home() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className={`${cornerstone.className} text-xs text-gray-300 leading-relaxed`}>
+                  <p className={`${cornerstone.className} text-sm text-gray-300 leading-relaxed`}>
                     {card.description}
                   </p>
                 </div>
@@ -296,9 +296,9 @@ export default function Home() {
           href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2"
+          className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
         >
-          <div className="w-5 h-5 relative">
+          <div className="w-5 h-5 relative transition-all duration-300 group-hover:brightness-125">
             <Image
               src="/dexscreener.png"
               alt="DexScreener"
