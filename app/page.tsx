@@ -191,7 +191,7 @@ export default function Home() {
               title: "APPRECIATING ASSET",
               description: "ENJOY THE INHERENT APPRECIATION OF ORCA MONSTA AS BURN FUNCTIONS CONTINUALLY REDUCE THE AMOUNTS OF ORCA MONSTA IN CIRCULATION.",
               icon: (
-                <svg className="w-12 h-12 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-blue-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
                     d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
@@ -201,7 +201,7 @@ export default function Home() {
               title: "EASY",
               description: "BROUGHT TO YOU ON THE SOLANA NETWORK, PROVIDING SEAMLESS AND SECURE TX'S. USE YOUR FAVORITE WALLET PROVIDER TO HODL ORCA MONSTA TODAY!",
               icon: (
-                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-yellow-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
                     d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -211,7 +211,7 @@ export default function Home() {
               title: "TECHNOLOGY",
               description: "BUILT ON SOLANA'S CUTTING-EDGE BLOCKCHAIN, FEATURING AUTOMATED SMART CONTRACTS, ADVANCED TOKENOMICS AND OUR OWN REVOLUTIONARY, NEVER BEFORE SEEN TECHNOLOGY.",
               icon: (
-                <svg className="w-12 h-12 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-red-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>

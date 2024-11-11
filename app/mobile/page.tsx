@@ -9,6 +9,17 @@ const cornerstone = localFont({
   variable: '--font-cornerstone'
 })
 
+const menuItems = [
+  { name: "About", href: "/under-construction" },
+  { name: "How it works", href: "/under-construction" },
+  { name: "Roadmap", href: "/under-construction" },
+  { name: "Whitepaper", href: "/under-construction" },
+  { name: "Team", href: "/under-construction" },
+  { name: "Contact", href: "/under-construction" },
+  { name: "Terms", href: "/under-construction" },
+  { name: "Privacy", href: "/under-construction" }
+];
+
 const MobilePage = () => {
   const [copied, setCopied] = useState(false);
   const contractAddress = "CALYAYTQWNYZA8WSZJSFNFUWUVMGKQE0F9HX9";
