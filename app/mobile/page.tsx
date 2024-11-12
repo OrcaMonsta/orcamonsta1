@@ -14,15 +14,23 @@ const MobilePage = () => {
   const [copied, setCopied] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const contractAddress = "CALYAYTQWNYZA8WSZJSFNFUWUVMGKQE0F9HX9";
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   const menuItems = [
+    { 
+      name: "About",
+      subItems: [
+        { name: "About", href: "/about" },
+        { name: "How it works", href: "/how-it-works" },
+        { name: "Roadmap", href: "/roadmap" },
+        { name: "Whitepaper", href: "/under-construction" },
+        { name: "Team", href: "/under-construction" }
+      ]
+    },
     { name: "NFTs", href: "/under-construction" },
     { name: "Gobbler", href: "/under-construction" },
-    { name: "About", href: "/about" },
-    { name: "How it works", href: "/how-it-works" },
-    { name: "Roadmap", href: "/roadmap" },
-    { name: "Whitepaper", href: "/under-construction" },
-    { name: "Team", href: "/under-construction" },
+    { name: "Community", href: "/under-construction" },
+    { name: "Announcements", href: "/under-construction" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -105,23 +113,59 @@ const MobilePage = () => {
 
           {/* Menu Items - Now conditionally rendered */}
           {isMenuOpen && (
-            <div className="backdrop-blur-md bg-black/30 rounded-xl border border-gray-800/50 overflow-hidden">
+            <div className="backdrop-blur-md bg-black/30 rounded-xl border border-gray-800/50 overflow-hidden 
+              absolute top-full left-0 z-50 w-48 mt-2">
               <div className="py-2">
                 {menuItems.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.href}
-                    className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
-                  >
-                    <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
-                      scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                  <div key={index}>
+                    {item.subItems ? (
+                      <button
+                        className="w-full px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group flex items-center justify-between"
+                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                      >
+                        <span className="relative z-10 flex items-center gap-2">
+                          {item.name}
+                        </span>
+                        <span className={`text-cyan-400 transition-transform duration-300 ${activeSubmenu === item.name ? 'rotate-90' : ''}`}>→</span>
+                      </button>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
+                      >
+                        <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
+                          scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                        
+                        <span className="relative z-10 flex items-center gap-2">
+                          {item.name}
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                            text-cyan-400">→</span>
+                        </span>
+                      </Link>
+                    )}
                     
-                    <span className="relative z-10 flex items-center gap-2 text-sm">
-                      {item.name}
-                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                        text-cyan-400">→</span>
-                    </span>
-                  </a>
+                    {/* Submenu Items */}
+                    {item.subItems && activeSubmenu === item.name && (
+                      <div className="bg-black/20 py-1">
+                        {item.subItems.map((subItem, subIndex) => (
+                          <Link
+                            key={subIndex}
+                            href={subItem.href}
+                            className="block px-6 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
+                          >
+                            <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
+                              scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            
+                            <span className="relative z-10 flex items-center gap-2">
+                              {subItem.name}
+                              <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                                text-cyan-400">→</span>
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
