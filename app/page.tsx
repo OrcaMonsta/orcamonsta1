@@ -160,7 +160,7 @@ export default function Home() {
 
       {/* Right side content */}
       <div className="absolute right-10 top-1/3 max-w-md z-10">
-        <h1 className={`${cornerstone.className} text-2xl font-bold mb-4 text-shadow-lg`}>
+        <h1 className={`${cornerstone.className} text-3xl font-bold mb-4 text-shadow-lg`}>
           STEP INTO THE TRENCHES AND GET AN EXCLUSIVE LOOK AT THE MAKING OF $ORCA
         </h1>
         <a 

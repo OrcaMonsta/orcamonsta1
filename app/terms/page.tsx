@@ -103,19 +103,6 @@ export default function Terms() {
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-green-500/10 rounded-full blur-[128px] animate-pulse delay-700"></div>
       </div>
 
-      {/* Navigation */}
-      <nav className="relative z-10 p-6">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Back to Home
-        </Link>
-      </nav>
-
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-12">
         <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-2`}>
@@ -131,11 +118,10 @@ export default function Terms() {
         </p>
 
         <div className="space-y-8">
-          {/* Terms Sections */}
           {sections.map((section, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
               shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
-              transform transition-all duration-300 group overflow-hidden">
+              transform transition-all duration-300 group overflow-hidden hover:bg-black/40">
               {/* Animated corner effects */}
               <div className="absolute top-0 left-0 w-32 h-32">
                 <div className="absolute w-full h-full animate-pulse">
@@ -150,9 +136,17 @@ export default function Terms() {
                 </h2>
                 <div className="space-y-3">
                   {section.content.map((text, textIndex) => (
-                    <p key={textIndex} className={`${cornerstone.className} text-gray-300`}>
-                      {text}
-                    </p>
+                    <div 
+                      key={textIndex} 
+                      className={`${cornerstone.className} text-gray-300 flex items-start group mb-3`}
+                    >
+                      <div className="flex-shrink-0 w-6 h-6 mr-3 relative">
+                        <div className="absolute inset-0 bg-cyan-500/20 rounded-sm transform rotate-45" />
+                        <div className="absolute inset-[2px] bg-cyan-500/10 rounded-sm transform rotate-45 group-hover:bg-cyan-500/20 transition-all duration-300" />
+                        <div className="absolute inset-[3px] border border-cyan-500/30 rounded-sm transform rotate-45" />
+                      </div>
+                      <span className="mt-1">{text}</span>
+                    </div>
                   ))}
                 </div>
               </div>

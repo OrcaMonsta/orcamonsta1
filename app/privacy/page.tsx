@@ -9,6 +9,27 @@ const cornerstone = localFont({
   variable: '--font-cornerstone'
 })
 
+// Add this custom bullet component
+const CyberBullet = () => (
+  <span className="inline-block mr-3 align-middle">
+    <svg 
+      className="w-2 h-2 text-cyan-500" 
+      viewBox="0 0 8 8" 
+      fill="currentColor"
+    >
+      <rect 
+        width="8" 
+        height="8" 
+        className="animate-pulse"
+        style={{ 
+          transformOrigin: 'center',
+          animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+        }}
+      />
+    </svg>
+  </span>
+);
+
 export default function Privacy() {
   const sections = [
     {
@@ -211,7 +232,7 @@ export default function Privacy() {
           {sections.map((section, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
               shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
-              transform transition-all duration-300 group overflow-hidden">
+              transform transition-all duration-300 group overflow-hidden hover:bg-black/40">
               {/* Animated corner effects */}
               <div className="absolute top-0 left-0 w-32 h-32">
                 <div className="absolute w-full h-full animate-pulse">
@@ -228,9 +249,17 @@ export default function Privacy() {
                   {section.content ? (
                     // Render regular content
                     section.content.map((text, textIndex) => (
-                      <p key={textIndex} className={`${cornerstone.className} text-gray-300`}>
-                        {text}
-                      </p>
+                      <div 
+                        key={textIndex} 
+                        className={`${cornerstone.className} text-gray-300 flex items-start group mb-3`}
+                      >
+                        <div className="flex-shrink-0 w-6 h-6 mr-3 relative">
+                          <div className="absolute inset-0 bg-cyan-500/20 rounded-sm transform rotate-45" />
+                          <div className="absolute inset-[2px] bg-cyan-500/10 rounded-sm transform rotate-45 group-hover:bg-cyan-500/20 transition-all duration-300" />
+                          <div className="absolute inset-[3px] border border-cyan-500/30 rounded-sm transform rotate-45" />
+                        </div>
+                        <span className="mt-1">{text}</span>
+                      </div>
                     ))
                   ) : section.subsections ? (
                     // Render subsections
@@ -241,9 +270,17 @@ export default function Privacy() {
                         </h3>
                         <div className="space-y-2">
                           {subsection.points.map((point, pointIndex) => (
-                            <p key={pointIndex} className={`${cornerstone.className} text-gray-300`}>
-                              {point}
-                            </p>
+                            <div 
+                              key={pointIndex} 
+                              className={`${cornerstone.className} text-gray-300 flex items-start group`}
+                            >
+                              <div className="flex-shrink-0 w-4 h-4 mr-3 relative mt-1">
+                                <div className="absolute inset-0 bg-green-500/20 rounded-sm transform rotate-45" />
+                                <div className="absolute inset-[1px] bg-green-500/10 rounded-sm transform rotate-45 group-hover:bg-green-500/20 transition-all duration-300" />
+                                <div className="absolute inset-[2px] border border-green-500/30 rounded-sm transform rotate-45" />
+                              </div>
+                              <span>{point}</span>
+                            </div>
                           ))}
                         </div>
                       </div>
