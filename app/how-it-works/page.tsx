@@ -127,7 +127,7 @@ export default function HowItWorks() {
                   USERS
                 </h3>
                 <div className="text-center text-gray-300">
-                  "APING INTO" SPECIFIC POOLS
+                  "INVESTING INTO" SPECIFIC POOLS
                 </div>
               </motion.div>
 
@@ -138,12 +138,12 @@ export default function HowItWorks() {
                 className="w-[450px] p-6 bg-[#0d1528] rounded-xl border border-blue-400/20"
               >
                 <h3 className={`${cornerstone.className} text-xl text-center text-blue-400 mb-4`}>
-                  AUTOMATED TRADING TOOL
+                  AUTOMATED TRADING PROTOCOL
                 </h3>
                 <ul className="space-y-2 text-gray-300">
                   <li>• AUTOMATED POSITION MANAGEMENT</li>
                   <li>• BACKEND UNIQUE KEY GENERATION</li>
-                  <li>• SIMILAR TO BULBS/PHOTON PLATFORMS</li>
+                  <li>• SIMILAR TO BULLX/PHOTON PLATFORMS</li>
                   <li>• HIGH YIELD POTENTIAL</li>
                   <li>• ASSET OPTIMIZATION SYSTEM</li>
                 </ul>
@@ -223,7 +223,7 @@ export default function HowItWorks() {
             </div>
 
             {/* Bottom Text */}
-            <div className="text-center text-green-400 text-sm mt-16">
+            <div className="text-center text-green-400 text-lg mt-16">
               CONTINUOUS ECOSYSTEM GROWTH CYCLE
             </div>
           </div>
