@@ -117,86 +117,63 @@ export default function HowItWorks() {
           <div className="relative backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
             shadow-[0_0_50px_rgba(0,255,255,0.1)]">
             
-            {/* Users Section */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-md mx-auto mb-12 p-6 bg-purple-400/10 rounded-xl border border-purple-400/20"
-            >
-              <h3 className={`${cornerstone.className} text-xl text-center text-purple-400 mb-4`}>
-                Users
-              </h3>
-              <div className="text-center space-y-2">
-                <div className="text-gray-300">
-                  "Aping into" specific pools
-                </div>
-                <div className="text-sm text-gray-400">
-                  Rewarded portion of fees
-                </div>
-              </div>
-              {/* Animated Arrow Down */}
-              <div className="w-[2px] h-8 mx-auto mt-4 bg-gradient-to-b from-purple-400/50 to-blue-400/50 animate-pulse"></div>
-            </motion.div>
-
             {/* Trading Tool Section */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.5 }}
               className="max-w-2xl mx-auto mb-12 p-6 bg-blue-400/10 rounded-xl border border-blue-400/20"
             >
               <h3 className={`${cornerstone.className} text-xl text-center text-blue-400 mb-4`}>
-                AUTOMATED TRADING TOOL
+                Automated Trading via Whirlpool Protocol.
               </h3>
               <ul className="space-y-2 text-gray-300">
-                <motion.li 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="flex items-center gap-2"
-                >
-                  <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-                  AUTOMATED POSITION MANAGEMENT
-                </motion.li>
-                {/* Add similar motion.li for other items with increasing delays */}
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Automated position management
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Backend unique key generation
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Similar to Bullx/Photon platforms
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  High yield potential (100% APY)
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Asset optimization system
+                </li>
               </ul>
-              {/* Animated Arrow Down */}
-              <div className="w-[2px] h-8 mx-auto mt-4 bg-gradient-to-b from-blue-400/50 to-pink-400/50 animate-pulse"></div>
             </motion.div>
 
             {/* Fee Distribution Section */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="max-w-3xl mx-auto mb-12 p-6 bg-pink-400/10 rounded-xl border border-pink-400/20"
             >
               <h3 className={`${cornerstone.className} text-xl text-center text-pink-400 mb-4`}>
-                PROTOCOL FEE DISTRIBUTION
+                Protocol Fee Distribution
               </h3>
               <div className="flex justify-center gap-8 mb-4">
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50"
-                >
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
                   <div className="text-2xl font-bold text-pink-400">10%</div>
-                  <div className="text-sm text-gray-300">$ORCA TOKEN HOLDERS</div>
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.6 }}
-                  className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50"
-                >
+                  <div className="text-sm text-gray-300">$ORCA Token Holders</div>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
                   <div className="text-2xl font-bold text-pink-400">90%</div>
-                  <div className="text-sm text-gray-300">PREDICTION MARKET POOLS</div>
-                </motion.div>
+                  <div className="text-sm text-gray-300">Prediction Market Pools</div>
+                </div>
               </div>
-              {/* Animated Arrow Down */}
-              <div className="w-[2px] h-8 mx-auto mt-4 bg-gradient-to-b from-pink-400/50 to-cyan-400/50 animate-pulse"></div>
+              <div className="text-center text-gray-300 text-sm">
+                Distribution based on Total Value Locked (TVL)
+              </div>
             </motion.div>
 
             {/* Benefits Section */}
