@@ -114,37 +114,33 @@ export default function HowItWorks() {
             ORCA WHIRLPOOL ECOSYSTEM
           </h2>
           
-          <div className="relative bg-black/30 rounded-xl border border-gray-800/50 
-            shadow-[0_0_50px_rgba(0,255,255,0.1)] min-h-[700px] max-w-[1200px] mx-auto p-12">
-            
+          <div className="relative bg-black min-h-[800px] max-w-[1400px] mx-auto p-16">
             {/* Top Row */}
-            <div className="flex justify-between items-start mb-24">
-              {/* Left User Box */}
+            <div className="flex justify-between items-start mb-32">
+              {/* Users Box */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#1a1528] rounded-xl border border-purple-400/20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="w-[280px] p-6 bg-[#1a1528] rounded-xl border border-purple-400/20"
               >
-                <h3 className={`${cornerstone.className} text-lg text-center text-purple-400 mb-2`}>
+                <h3 className={`${cornerstone.className} text-xl text-center text-purple-400 mb-4`}>
                   USERS
                 </h3>
-                <div className="text-center text-gray-300 text-sm">
+                <div className="text-center text-gray-300">
                   "APING INTO" SPECIFIC POOLS
                 </div>
               </motion.div>
 
-              {/* Center Trading Tool Box */}
+              {/* Trading Tool Box */}
               <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="w-[400px] p-6 bg-[#0d1528] rounded-xl border border-blue-400/20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="w-[450px] p-6 bg-[#0d1528] rounded-xl border border-blue-400/20"
               >
-                <h3 className={`${cornerstone.className} text-lg text-center text-blue-400 mb-4`}>
+                <h3 className={`${cornerstone.className} text-xl text-center text-blue-400 mb-4`}>
                   AUTOMATED TRADING TOOL
                 </h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
+                <ul className="space-y-2 text-gray-300">
                   <li>• AUTOMATED POSITION MANAGEMENT</li>
                   <li>• BACKEND UNIQUE KEY GENERATION</li>
                   <li>• SIMILAR TO BULBS/PHOTON PLATFORMS</li>
@@ -153,35 +149,57 @@ export default function HowItWorks() {
                 </ul>
               </motion.div>
 
-              {/* Right Prediction Markets Box */}
+              {/* Prediction Markets Box */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#0d1a0d] rounded-xl border border-green-400/20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="w-[280px] p-6 bg-[#0d1a0d] rounded-xl border border-green-400/20"
               >
-                <h3 className={`${cornerstone.className} text-lg text-center text-green-400 mb-2`}>
+                <h3 className={`${cornerstone.className} text-xl text-center text-green-400 mb-4`}>
                   PREDICTION MARKETS
                 </h3>
-                <div className="text-center text-gray-300 text-sm">
+                <div className="text-center text-gray-300">
                   WIN ROUNDS THROUGH SWAPS
                 </div>
               </motion.div>
             </div>
 
-            {/* Middle Row */}
-            <div className="flex justify-between items-center mb-24">
-              {/* Left Side - Benefits */}
+            {/* Middle - Protocol Fee Distribution */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="w-[500px] mx-auto mb-32 p-6 bg-[#1a0d1a] rounded-xl border border-pink-400/20"
+            >
+              <h3 className={`${cornerstone.className} text-xl text-center text-pink-400 mb-4`}>
+                PROTOCOL FEE DISTRIBUTION
+              </h3>
+              <div className="grid grid-cols-2 gap-8 mb-4">
+                <div className="text-center p-4 bg-black/40 rounded-lg">
+                  <div className="text-2xl font-bold text-pink-400">10%</div>
+                  <div className="text-sm text-gray-300">$ORCA TOKEN HOLDERS</div>
+                </div>
+                <div className="text-center p-4 bg-black/40 rounded-lg">
+                  <div className="text-2xl font-bold text-pink-400">90%</div>
+                  <div className="text-sm text-gray-300">PREDICTION MARKET POOLS</div>
+                </div>
+              </div>
+              <div className="text-center text-sm text-gray-300">
+                DISTRIBUTION BASED ON TOTAL VALUE LOCKED (TVL)
+              </div>
+            </motion.div>
+
+            {/* Bottom Row */}
+            <div className="flex justify-between items-start">
+              {/* Benefits Box */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#0d1f1f] rounded-xl border border-cyan-400/20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="w-[280px] p-6 bg-[#0d1f1f] rounded-xl border border-cyan-400/20"
               >
-                <h3 className={`${cornerstone.className} text-lg text-center text-cyan-400 mb-2`}>
+                <h3 className={`${cornerstone.className} text-xl text-center text-cyan-400 mb-4`}>
                   BENEFITS
                 </h3>
-                <ul className="space-y-1 text-gray-300 text-sm">
+                <ul className="space-y-2 text-gray-300">
                   <li>• ENHANCED $ORCA TOKEN UTILITY</li>
                   <li>• REWARDS FOR TOKEN HOLDERS</li>
                   <li>• GROWING ECOSYSTEM</li>
@@ -189,50 +207,73 @@ export default function HowItWorks() {
                 </ul>
               </motion.div>
 
-              {/* Center - Protocol Fee Distribution */}
+              {/* Burn Mechanism Box */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="w-[400px] p-6 bg-[#1a0d1a] rounded-xl border border-pink-400/20"
+                className="w-[280px] p-6 bg-[#110d1a] rounded-xl border border-red-400/20"
               >
-                <h3 className={`${cornerstone.className} text-lg text-center text-pink-400 mb-4`}>
-                  PROTOCOL FEE DISTRIBUTION
-                </h3>
-                <div className="grid grid-cols-2 gap-6 mb-4">
-                  <div className="text-center p-3 bg-black/40 rounded-lg">
-                    <div className="text-xl font-bold text-pink-400">10%</div>
-                    <div className="text-sm text-gray-300">$ORCA TOKEN HOLDERS</div>
-                  </div>
-                  <div className="text-center p-3 bg-black/40 rounded-lg">
-                    <div className="text-xl font-bold text-pink-400">90%</div>
-                    <div className="text-sm text-gray-300">PREDICTION MARKET POOLS</div>
-                  </div>
-                </div>
-                <div className="text-center text-sm text-gray-300">
-                  DISTRIBUTION BASED ON TOTAL VALUE LOCKED (TVL)
-                </div>
-              </motion.div>
-
-              {/* Right Side - Burn Mechanism */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#110d1a] rounded-xl border border-red-400/20"
-              >
-                <h3 className={`${cornerstone.className} text-lg text-center text-red-400 mb-2`}>
+                <h3 className={`${cornerstone.className} text-xl text-center text-red-400 mb-4`}>
                   BURN MECHANISM
                 </h3>
-                <div className="text-center text-gray-300 text-sm">
+                <div className="text-center text-gray-300">
                   INHERENT BURN FUNCTIONS REDUCE TOTAL SUPPLY OF TOKEN
                 </div>
               </motion.div>
             </div>
 
+            {/* Arrows */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none">
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="rgba(147, 197, 253, 0.4)" />
+                </marker>
+              </defs>
+              <g>
+                {/* Horizontal Arrows */}
+                <motion.path 
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  d="M300 100 H450" 
+                  stroke="rgba(147, 197, 253, 0.4)" 
+                  strokeWidth="2" 
+                  markerEnd="url(#arrowhead)" 
+                />
+                <motion.path 
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  d="M750 100 H900" 
+                  stroke="rgba(147, 197, 253, 0.4)" 
+                  strokeWidth="2" 
+                  markerEnd="url(#arrowhead)" 
+                />
+
+                {/* Vertical Arrows */}
+                <motion.path 
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  d="M600 200 V300" 
+                  stroke="rgba(147, 197, 253, 0.4)" 
+                  strokeWidth="2" 
+                  markerEnd="url(#arrowhead)" 
+                />
+
+                {/* Curved Return Arrow */}
+                <motion.path 
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  d="M200 400 Q150 250 200 100" 
+                  stroke="rgba(34, 197, 94, 0.4)" 
+                  strokeWidth="2" 
+                  strokeDasharray="4 2"
+                  markerEnd="url(#arrowhead)" 
+                />
+              </g>
+            </svg>
+
             {/* Bottom Text */}
-            <div className="text-center text-green-400/60 text-sm italic mt-8">
-              Continuous Ecosystem Growth Cycle
+            <div className="text-center text-green-400 text-sm mt-16">
+              CONTINUOUS ECOSYSTEM GROWTH CYCLE
             </div>
           </div>
         </div>
