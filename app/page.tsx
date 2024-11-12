@@ -305,7 +305,7 @@ export default function Home() {
               src="/dexscreener.png"
               alt="DexScreener"
               fill
-              className="object-contain transition-all duration-300"
+              className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
               style={{
                 filter: 'brightness(0.8)',
                 opacity: '0.8'

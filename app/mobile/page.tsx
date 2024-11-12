@@ -239,18 +239,23 @@ const MobilePage = () => {
 
         {/* Social Links */}
         <div className="flex justify-center gap-6 py-4">
+          {/* Social Links - DexScreener */}
           <a 
             href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
           >
-            <div className="w-5 h-5 relative transition-all duration-300 group-hover:brightness-125">
+            <div className="w-5 h-5 relative">
               <Image
                 src="/dexscreener.png"
                 alt="DexScreener"
                 fill
-                className="object-contain"
+                className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
+                style={{
+                  filter: 'brightness(0.8)',
+                  opacity: '0.8'
+                }}
                 priority
               />
             </div>
