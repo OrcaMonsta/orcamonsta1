@@ -21,7 +21,7 @@ export default function Home() {
     { name: "Whitepaper", href: "/under-construction" },
     { name: "Team", href: "/under-construction" },
     { name: "Contact", href: "/under-construction" },
-    { name: "Terms", href: "/under-construction" },
+    { name: "Terms", href: "/terms" },
     { name: "Privacy", href: "/privacy" }
 ];
 
