@@ -124,13 +124,13 @@ export default function HowItWorks() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#6366f1]/20 rounded-xl border border-purple-400/20"
+                className="w-[250px] p-4 bg-[#1a1528] rounded-xl border border-purple-400/20"
               >
                 <h3 className={`${cornerstone.className} text-lg text-center text-purple-400 mb-2`}>
-                  Users
+                  USERS
                 </h3>
                 <div className="text-center text-gray-300 text-sm">
-                  "Aping into" specific pools
+                  "APING INTO" SPECIFIC POOLS
                 </div>
               </motion.div>
 
@@ -139,32 +139,17 @@ export default function HowItWorks() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="w-[400px] p-6 bg-[#0ea5e9]/20 rounded-xl border border-blue-400/20"
+                className="w-[400px] p-6 bg-[#0d1528] rounded-xl border border-blue-400/20"
               >
                 <h3 className={`${cornerstone.className} text-lg text-center text-blue-400 mb-4`}>
-                  Automated Trading Tool
+                  AUTOMATED TRADING TOOL
                 </h3>
                 <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                    Automated position management
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                    Backend unique key generation
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                    Similar to Bulbs/Photon platforms
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                    High yield potential
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                    Asset optimization system
-                  </li>
+                  <li>• AUTOMATED POSITION MANAGEMENT</li>
+                  <li>• BACKEND UNIQUE KEY GENERATION</li>
+                  <li>• SIMILAR TO BULBS/PHOTON PLATFORMS</li>
+                  <li>• HIGH YIELD POTENTIAL</li>
+                  <li>• ASSET OPTIMIZATION SYSTEM</li>
                 </ul>
               </motion.div>
 
@@ -173,13 +158,13 @@ export default function HowItWorks() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#22c55e]/20 rounded-xl border border-green-400/20"
+                className="w-[250px] p-4 bg-[#0d1a0d] rounded-xl border border-green-400/20"
               >
                 <h3 className={`${cornerstone.className} text-lg text-center text-green-400 mb-2`}>
-                  Prediction Markets
+                  PREDICTION MARKETS
                 </h3>
                 <div className="text-center text-gray-300 text-sm">
-                  Win rounds through swaps
+                  WIN ROUNDS THROUGH SWAPS
                 </div>
               </motion.div>
             </div>
@@ -191,16 +176,16 @@ export default function HowItWorks() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#06b6d4]/20 rounded-xl border border-cyan-400/20"
+                className="w-[250px] p-4 bg-[#0d1f1f] rounded-xl border border-cyan-400/20"
               >
                 <h3 className={`${cornerstone.className} text-lg text-center text-cyan-400 mb-2`}>
-                  Benefits
+                  BENEFITS
                 </h3>
                 <ul className="space-y-1 text-gray-300 text-sm">
-                  <li>• Enhanced $ORCA token utility</li>
-                  <li>• Rewards for token holders</li>
-                  <li>• Growing ecosystem</li>
-                  <li>• Dynamic reward cycle</li>
+                  <li>• ENHANCED $ORCA TOKEN UTILITY</li>
+                  <li>• REWARDS FOR TOKEN HOLDERS</li>
+                  <li>• GROWING ECOSYSTEM</li>
+                  <li>• DYNAMIC REWARD CYCLE</li>
                 </ul>
               </motion.div>
 
@@ -209,23 +194,23 @@ export default function HowItWorks() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                className="w-[400px] p-6 bg-[#ec4899]/20 rounded-xl border border-pink-400/20"
+                className="w-[400px] p-6 bg-[#1a0d1a] rounded-xl border border-pink-400/20"
               >
                 <h3 className={`${cornerstone.className} text-lg text-center text-pink-400 mb-4`}>
-                  Protocol Fee Distribution
+                  PROTOCOL FEE DISTRIBUTION
                 </h3>
                 <div className="grid grid-cols-2 gap-6 mb-4">
                   <div className="text-center p-3 bg-black/40 rounded-lg">
                     <div className="text-xl font-bold text-pink-400">10%</div>
-                    <div className="text-sm text-gray-300">$ORCA Token Holders</div>
+                    <div className="text-sm text-gray-300">$ORCA TOKEN HOLDERS</div>
                   </div>
                   <div className="text-center p-3 bg-black/40 rounded-lg">
                     <div className="text-xl font-bold text-pink-400">90%</div>
-                    <div className="text-sm text-gray-300">Prediction Market Pools</div>
+                    <div className="text-sm text-gray-300">PREDICTION MARKET POOLS</div>
                   </div>
                 </div>
                 <div className="text-center text-sm text-gray-300">
-                  Distribution based on Total Value Locked (TVL)
+                  DISTRIBUTION BASED ON TOTAL VALUE LOCKED (TVL)
                 </div>
               </motion.div>
 
@@ -234,38 +219,21 @@ export default function HowItWorks() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="w-[250px] p-4 bg-[#6366f1]/20 rounded-xl border border-purple-400/20"
+                className="w-[250px] p-4 bg-[#110d1a] rounded-xl border border-red-400/20"
               >
                 <h3 className={`${cornerstone.className} text-lg text-center text-red-400 mb-2`}>
-                  Burn Mechanism
+                  BURN MECHANISM
                 </h3>
                 <div className="text-center text-gray-300 text-sm">
-                  Inherent burn functions reduce total supply of token
+                  INHERENT BURN FUNCTIONS REDUCE TOTAL SUPPLY OF TOKEN
                 </div>
               </motion.div>
             </div>
 
-            {/* Flow Arrows */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none">
-              <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="rgba(147, 197, 253, 0.4)" />
-                </marker>
-              </defs>
-              <motion.g
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              >
-                {/* Horizontal Arrows */}
-                <path d="M310 150 H590" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                <path d="M590 400 H310" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                
-                {/* Vertical and Diagonal Arrows */}
-                <path d="M600 200 L600 350" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                <path d="M300 350 Q250 275 300 200" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" strokeDasharray="4 2" markerEnd="url(#arrowhead)" />
-              </motion.g>
-            </svg>
+            {/* Bottom Text */}
+            <div className="text-center text-green-400/60 text-sm italic mt-8">
+              Continuous Ecosystem Growth Cycle
+            </div>
           </div>
         </div>
 
