@@ -1,8 +1,9 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import localFont from 'next/font/local'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const cornerstone = localFont({ 
   src: '../../public/cornerstone.ttf',
@@ -10,6 +11,8 @@ const cornerstone = localFont({
 })
 
 export default function HowItWorks() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const steps = [
     {
       title: "CONNECT WALLET",
@@ -77,7 +80,7 @@ export default function HowItWorks() {
         </h1>
 
         {/* Steps Grid */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 mb-12">
           {steps.map((step, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-6 border border-gray-800/50 
               shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
@@ -105,34 +108,86 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        {/* Additional Information Container */}
-        <div className="mt-12 backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
-          shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
-          transform transition-all duration-300 group overflow-hidden">
-          <div className="relative z-10">
-            <h2 className={`${cornerstone.className} text-2xl font-bold text-green-400 mb-4`}>
-              ADVANCED FEATURES
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className={`${cornerstone.className} text-xl text-cyan-400 mb-2`}>
-                  AUTOMATED LIQUIDITY
-                </h3>
-                <p className={`${cornerstone.className} text-gray-300 leading-relaxed`}>
-                  OUR SMART CONTRACTS AUTOMATICALLY MANAGE LIQUIDITY POOLS TO ENSURE STABLE TRADING CONDITIONS.
-                </p>
-              </div>
-              <div>
-                <h3 className={`${cornerstone.className} text-xl text-cyan-400 mb-2`}>
-                  REWARD DISTRIBUTION
-                </h3>
-                <p className={`${cornerstone.className} text-gray-300 leading-relaxed`}>
-                  HOLDERS RECEIVE AUTOMATIC REWARDS THROUGH OUR INNOVATIVE TOKENOMICS SYSTEM.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Expand Button */}
+        <div className="text-center mb-8">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="px-8 py-3 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
+              border border-cyan-500/50 rounded-lg
+              hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] 
+              active:shadow-[0_0_50px_rgba(0,255,255,0.4)]
+              transition-all duration-300"
+          >
+            {isExpanded ? 'Show Less' : 'Learn More'}
+          </button>
         </div>
+
+        {/* Expandable Content */}
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="w-full mx-auto"
+            >
+              <div className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
+                shadow-[0_0_50px_rgba(0,255,255,0.1)]">
+                {/* YouTube Video */}
+                <div className="mb-8">
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                    <iframe 
+                      src="https://www.youtube.com/embed/LJ3jUXtnFGA?si=Csez2HSKaaUszk-j" 
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+
+                {/* Content Sections */}
+                <div className="space-y-8">
+                  <h3 className={`${cornerstone.className} text-2xl font-bold text-cyan-400 mb-4`}>
+                    UNDERSTANDING THE ORCA WHIRLPOOL PROJECT & FEE DISTRIBUTION
+                  </h3>
+
+                  {/* Protocol Fees */}
+                  <div>
+                    <h4 className={`${cornerstone.className} text-xl text-green-400 mb-2`}>
+                      PROTOCOL FEES
+                    </h4>
+                    <p className="text-gray-300">
+                      10% of all protocol fees go directly to $ORCA token holders, adding significant value to the token. The remaining 90% is distributed to prediction market pools based on TVL.
+                    </p>
+                  </div>
+
+                  {/* App Functionality */}
+                  <div>
+                    <h4 className={`${cornerstone.className} text-xl text-green-400 mb-2`}>
+                      APP FUNCTIONALITY
+                    </h4>
+                    <p className="text-gray-300">
+                      Our contract-based automated trading tool optimizes your Orca positions using advanced backend systems and unique key generation for efficient algorithmically stable asset management.
+                    </p>
+                  </div>
+
+                  {/* Yield Potential */}
+                  <div>
+                    <h4 className={`${cornerstone.className} text-xl text-green-400 mb-2`}>
+                      YIELD POTENTIAL
+                    </h4>
+                    <p className="text-gray-300">
+                      Through efficient position management and fee capture, the system aims to generate substantial annual returns for participants.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </main>
   )
