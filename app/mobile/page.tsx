@@ -94,258 +94,260 @@ const MobilePage = () => {
             </div>
           </div>
 
-          {/* Menu Button */}
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex items-center gap-2 px-4 py-2 backdrop-blur-md bg-black/30 rounded-xl border border-gray-800/50 
-              hover:shadow-[0_0_30px_rgba(0,255,255,0.15)] transition-all duration-300"
-          >
-            <svg 
-              className={`w-6 h-6 transition-transform duration-300 ${isMenuOpen ? 'rotate-90' : ''}`}
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
+          {/* Menu Button and Menu Container */}
+          <div className="relative">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="flex items-center gap-2 px-4 py-2 backdrop-blur-md bg-black/30 rounded-xl border border-gray-800/50 
+                hover:shadow-[0_0_30px_rgba(0,255,255,0.15)] transition-all duration-300"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <span className="font-bold">Menu</span>
-          </button>
+              <svg 
+                className={`w-6 h-6 transition-transform duration-300 ${isMenuOpen ? 'rotate-90' : ''}`}
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <span className="font-bold">Menu</span>
+            </button>
 
-          {/* Menu Items - Now conditionally rendered */}
-          {isMenuOpen && (
-            <div className="backdrop-blur-md bg-black/30 rounded-xl border border-gray-800/50 overflow-hidden 
-              absolute top-full left-0 z-50 w-48 mt-2">
-              <div className="py-2">
-                {menuItems.map((item, index) => (
-                  <div key={index}>
-                    {item.subItems ? (
-                      <button
-                        className="w-full px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group flex items-center justify-between"
-                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                      >
-                        <span className="relative z-10 flex items-center gap-2">
-                          {item.name}
-                        </span>
-                        <span className={`text-cyan-400 transition-transform duration-300 ${activeSubmenu === item.name ? 'rotate-90' : ''}`}>→</span>
-                      </button>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
-                      >
-                        <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
-                          scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
-                        
-                        <span className="relative z-10 flex items-center gap-2">
-                          {item.name}
-                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                            text-cyan-400">→</span>
-                        </span>
-                      </Link>
-                    )}
-                    
-                    {/* Submenu Items */}
-                    {item.subItems && activeSubmenu === item.name && (
-                      <div className="bg-black/20 py-1">
-                        {item.subItems.map((subItem, subIndex) => (
-                          <Link
-                            key={subIndex}
-                            href={subItem.href}
-                            className="block px-6 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
-                          >
-                            <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
-                              scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
-                            
-                            <span className="relative z-10 flex items-center gap-2">
-                              {subItem.name}
-                              <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                                text-cyan-400">→</span>
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+            {/* Menu Items */}
+            {isMenuOpen && (
+              <div className="absolute top-full left-0 right-0 mt-2 backdrop-blur-md bg-black/30 rounded-xl border border-gray-800/50 
+                overflow-hidden z-50">
+                <div className="py-2">
+                  {menuItems.map((item, index) => (
+                    <div key={index}>
+                      {item.subItems ? (
+                        <button
+                          className="w-full px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group flex items-center justify-between"
+                          onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                        >
+                          <span className="relative z-10 flex items-center gap-2">
+                            {item.name}
+                          </span>
+                          <span className={`text-cyan-400 transition-transform duration-300 ${activeSubmenu === item.name ? 'rotate-90' : ''}`}>→</span>
+                        </button>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
+                        >
+                          <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
+                            scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                          
+                          <span className="relative z-10 flex items-center gap-2">
+                            {item.name}
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                              text-cyan-400">→</span>
+                          </span>
+                        </Link>
+                      )}
+                      
+                      {/* Submenu Items */}
+                      {item.subItems && activeSubmenu === item.name && (
+                        <div className="bg-black/20 py-1">
+                          {item.subItems.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={subItem.href}
+                              className="block px-6 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
+                            >
+                              <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
+                                scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                              
+                              <span className="relative z-10 flex items-center gap-2">
+                                {subItem.name}
+                                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                                  text-cyan-400">→</span>
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-        </div>
-
-        {/* Banner Image */}
-        <div className="relative w-full overflow-hidden">
-          <div className="relative w-full h-40 landscape:h-[85vh]">
-            <Image
-              src="/orcabanner.jpg"
-              alt="Orca Banner"
-              fill
-              className="object-contain portrait:scale-[1.1] landscape:object-cover rounded-xl opacity-60"
-              sizes="100vw"
-              priority
-              style={{
-                objectPosition: 'center center'
-              }}
-            />
+            )}
           </div>
-        </div>
 
-        {/* Main Content */}
-        <div className="flex flex-col gap-4">
-          <h1 className={`${cornerstone.className} text-xl font-bold text-shadow-lg`}>
-            STEP INTO THE TRENCHES AND GET AN EXCLUSIVE LOOK AT THE MAKING OF $ORCA
-          </h1>
-          <a 
-            href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${cornerstone.className} text-center border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition-colors backdrop-blur-sm`}
-          >
-            BUY $ORCA
-          </a>
-        </div>
-
-        {/* Feature Cards */}
-        <div className="flex flex-col gap-4">
-          {[
-            {
-              title: "DEFLATIONARY",
-              description: "ORCA MONSTA EMPLOYS STRATEGIC BURN MECHANISMS TO CONSISTENTLY REDUCE THE TOTAL SUPPLY, CREATING SUSTAINABLE PRICE APPRECIATION.",
-              icon: (
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              )
-            },
-            {
-              title: "APPRECIATING ASSET",
-              description: "ENJOY THE INHERENT APPRECIATION OF ORCA MONSTA AS BURN FUNCTIONS CONTINUALLY REDUCE THE AMOUNTS OF ORCA MONSTA IN CIRCULATION.",
-              icon: (
-                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
-                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              )
-            },
-            {
-              title: "EASY",
-              description: "BROUGHT TO YOU ON THE SOLANA NETWORK, PROVIDING SEAMLESS AND SECURE TX'S. USE YOUR FAVORITE WALLET PROVIDER TO HODL ORCA MONSTA TODAY!",
-              icon: (
-                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
-                    d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              )
-            },
-            {
-              title: "TECHNOLOGY",
-              description: "BUILT ON SOLANA'S CUTTING-EDGE BLOCKCHAIN, FEATURING AUTOMATED SMART CONTRACTS, ADVANCED TOKENOMICS AND OUR OWN REVOLUTIONARY, NEVER BEFORE SEEN TECHNOLOGY.",
-              icon: (
-                <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
-                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              )
-            }
-          ].map((card, index) => (
-            <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
-              <div className="flex items-center gap-3 mb-2">
-                {card.icon}
-                <h3 className={`${cornerstone.className} text-lg font-bold text-green-400`}>
-                  {card.title}
-                </h3>
-              </div>
-              <p className={`${cornerstone.className} text-sm text-gray-300`}>
-                {card.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Live Chart */}
-        <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-xl font-bold text-cyan-300">Live Chart</h2>
-            <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
-              Live 🟢
-            </span>
-          </div>
-          <div className="rounded-xl overflow-hidden">
-            <iframe 
-              src="https://dexscreener.com/solana/6wSRYHNg1C7T9S5cSqXCijxmiVBMu8P8dMH9ckUhEW2A?embed=1&theme=dark"
-              className="w-full h-[300px] border-0"
-              style={{
-                borderRadius: '12px',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
-              }}
-            ></iframe>
-          </div>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center gap-6 py-4">
-          {/* Social Links - DexScreener */}
-          <a 
-            href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
-          >
-            <div className="w-5 h-5 relative">
+          {/* Banner Image */}
+          <div className="relative w-full overflow-hidden">
+            <div className="relative w-full h-40 landscape:h-[85vh]">
               <Image
-                src="/dexscreener.png"
-                alt="DexScreener"
+                src="/orcabanner.jpg"
+                alt="Orca Banner"
                 fill
-                className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
-                style={{
-                  filter: 'brightness(0.8)',
-                  opacity: '0.8'
-                }}
+                className="object-contain portrait:scale-[1.1] landscape:object-cover rounded-xl opacity-60"
+                sizes="100vw"
                 priority
+                style={{
+                  objectPosition: 'center center'
+                }}
               />
             </div>
-            <span>DexScreener</span>
-          </a>
-          <a 
-            href="https://x.com/OrcaMonsta" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-blue-400 transition-colors duration-300 flex items-center gap-2"
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            Twitter
-          </a>
-          <a 
-            href="https://t.me/orca_monsta" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2"
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.411-.168.56-.505 1.287-.832 1.287-.319 0-.607-.297-.866-.53-.484-.434-2.747-1.791-3.267-2.151-.52-.36-1.013-.538-.505-1.287.507-.749 2.306-2.156 3.267-3.079.292-.28.558-.792-.053-.792s-2.179 1.372-3.267 2.151c-1.088.779-2.036.805-2.906.531-.87-.274-1.665-.531-1.665-.531s-.585-.234-.319-.766c.266-.532 1.665-1.287 1.665-1.287s2.473-1.019 4.239-1.688c1.766-.669 3.452-.938 3.825-.938.373 0 1.114.134.93.851z"/>
-            </svg>
-            Telegram
-          </a>
-        </div>
+          </div>
 
-        {/* Terms and Privacy Links */}
-        <div className="flex justify-center gap-4 text-sm mt-4">
-          <Link 
-            href="/terms"
-            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 relative group"
-          >
-            Terms
-            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link 
-            href="/privacy"
-            className="text-gray-400 hover:text-green-400 transition-colors duration-300 relative group"
-          >
-            Privacy
-            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+          {/* Main Content */}
+          <div className="flex flex-col gap-4">
+            <h1 className={`${cornerstone.className} text-xl font-bold text-shadow-lg`}>
+              STEP INTO THE TRENCHES AND GET AN EXCLUSIVE LOOK AT THE MAKING OF $ORCA
+            </h1>
+            <a 
+              href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${cornerstone.className} text-center border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition-colors backdrop-blur-sm`}
+            >
+              BUY $ORCA
+            </a>
+          </div>
+
+          {/* Feature Cards */}
+          <div className="flex flex-col gap-4">
+            {[
+              {
+                title: "DEFLATIONARY",
+                description: "ORCA MONSTA EMPLOYS STRATEGIC BURN MECHANISMS TO CONSISTENTLY REDUCE THE TOTAL SUPPLY, CREATING SUSTAINABLE PRICE APPRECIATION.",
+                icon: (
+                  <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )
+              },
+              {
+                title: "APPRECIATING ASSET",
+                description: "ENJOY THE INHERENT APPRECIATION OF ORCA MONSTA AS BURN FUNCTIONS CONTINUALLY REDUCE THE AMOUNTS OF ORCA MONSTA IN CIRCULATION.",
+                icon: (
+                  <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                )
+              },
+              {
+                title: "EASY",
+                description: "BROUGHT TO YOU ON THE SOLANA NETWORK, PROVIDING SEAMLESS AND SECURE TX'S. USE YOUR FAVORITE WALLET PROVIDER TO HODL ORCA MONSTA TODAY!",
+                icon: (
+                  <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
+                      d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                )
+              },
+              {
+                title: "TECHNOLOGY",
+                description: "BUILT ON SOLANA'S CUTTING-EDGE BLOCKCHAIN, FEATURING AUTOMATED SMART CONTRACTS, ADVANCED TOKENOMICS AND OUR OWN REVOLUTIONARY, NEVER BEFORE SEEN TECHNOLOGY.",
+                icon: (
+                  <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                )
+              }
+            ].map((card, index) => (
+              <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
+                <div className="flex items-center gap-3 mb-2">
+                  {card.icon}
+                  <h3 className={`${cornerstone.className} text-lg font-bold text-green-400`}>
+                    {card.title}
+                  </h3>
+                </div>
+                <p className={`${cornerstone.className} text-sm text-gray-300`}>
+                  {card.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Live Chart */}
+          <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-gray-800/50">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-xl font-bold text-cyan-300">Live Chart</h2>
+              <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
+                Live 🟢
+              </span>
+            </div>
+            <div className="rounded-xl overflow-hidden">
+              <iframe 
+                src="https://dexscreener.com/solana/6wSRYHNg1C7T9S5cSqXCijxmiVBMu8P8dMH9ckUhEW2A?embed=1&theme=dark"
+                className="w-full h-[300px] border-0"
+                style={{
+                  borderRadius: '12px',
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
+                }}
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex justify-center gap-6 py-4">
+            {/* Social Links - DexScreener */}
+            <a 
+              href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
+            >
+              <div className="w-5 h-5 relative">
+                <Image
+                  src="/dexscreener.png"
+                  alt="DexScreener"
+                  fill
+                  className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
+                  style={{
+                    filter: 'brightness(0.8)',
+                    opacity: '0.8'
+                  }}
+                  priority
+                />
+              </div>
+              <span>DexScreener</span>
+            </a>
+            <a 
+              href="https://x.com/OrcaMonsta" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-blue-400 transition-colors duration-300 flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Twitter
+            </a>
+            <a 
+              href="https://t.me/orca_monsta" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.411-.168.56-.505 1.287-.832 1.287-.319 0-.607-.297-.866-.53-.484-.434-2.747-1.791-3.267-2.151-.52-.36-1.013-.538-.505-1.287.507-.749 2.306-2.156 3.267-3.079.292-.28.558-.792-.053-.792s-2.179 1.372-3.267 2.151c-1.088.779-2.036.805-2.906.531-.87-.274-1.665-.531-1.665-.531s-.585-.234-.319-.766c.266-.532 1.665-1.287 1.665-1.287s2.473-1.019 4.239-1.688c1.766-.669 3.452-.938 3.825-.938.373 0 1.114.134.93.851z"/>
+              </svg>
+              Telegram
+            </a>
+          </div>
+
+          {/* Terms and Privacy Links */}
+          <div className="flex justify-center gap-4 text-sm mt-4">
+            <Link 
+              href="/terms"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 relative group"
+            >
+              Terms
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link 
+              href="/privacy"
+              className="text-gray-400 hover:text-green-400 transition-colors duration-300 relative group"
+            >
+              Privacy
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
