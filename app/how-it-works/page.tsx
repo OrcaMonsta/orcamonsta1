@@ -115,16 +115,16 @@ export default function HowItWorks() {
           </h2>
           
           <div className="relative backdrop-blur-md bg-[#080c14] rounded-xl border border-gray-800/50 
-            shadow-[0_0_50px_rgba(0,255,255,0.1)] h-[600px] max-w-[1200px] mx-auto p-8">
+            shadow-[0_0_50px_rgba(0,255,255,0.1)] h-[800px] max-w-[1400px] mx-auto p-16">
             
-            {/* Left Column */}
-            <div className="absolute left-8 space-y-8 w-[300px]">
+            {/* Top Row */}
+            <div className="flex justify-between items-start mb-32">
               {/* Users Box */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="p-6 bg-[#1a1528] rounded-xl border border-purple-400/20"
+                className="w-[280px] p-6 bg-[#1a1528] rounded-xl border border-purple-400/20"
               >
                 <h3 className={`${cornerstone.className} text-xl text-center text-purple-400 mb-4`}>
                   USERS
@@ -134,33 +134,12 @@ export default function HowItWorks() {
                 </div>
               </motion.div>
 
-              {/* Benefits Box */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="p-6 bg-[#0d1f1f] rounded-xl border border-cyan-400/20"
-              >
-                <h3 className={`${cornerstone.className} text-xl text-center text-cyan-400 mb-4`}>
-                  BENEFITS
-                </h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li>• ENHANCED $ORCA TOKEN UTILITY</li>
-                  <li>• REWARDS FOR TOKEN HOLDERS</li>
-                  <li>• GROWING ECOSYSTEM</li>
-                  <li>• DYNAMIC REWARD CYCLE</li>
-                </ul>
-              </motion.div>
-            </div>
-
-            {/* Center Column */}
-            <div className="absolute left-1/2 -translate-x-1/2 space-y-8 w-[500px]">
               {/* Protocol Box */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="p-6 bg-[#0d1528] rounded-xl border border-blue-400/20"
+                className="w-[480px] p-6 bg-[#0d1528] rounded-xl border border-blue-400/20"
               >
                 <h3 className={`${cornerstone.className} text-xl text-center text-blue-400 mb-4`}>
                   AUTOMATED ORCA WHIRLPOOL PROTOCOL
@@ -174,40 +153,12 @@ export default function HowItWorks() {
                 </ul>
               </motion.div>
 
-              {/* Fee Distribution Box */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="p-6 bg-[#1a0d1a] rounded-xl border border-pink-400/20"
-              >
-                <h3 className={`${cornerstone.className} text-xl text-center text-pink-400 mb-4`}>
-                  PROTOCOL FEE DISTRIBUTION
-                </h3>
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="text-center p-4 bg-[#0d0d0d] rounded-lg">
-                    <div className="text-2xl font-bold text-pink-400">10%</div>
-                    <div className="text-sm text-gray-300">$ORCA TOKEN HOLDERS</div>
-                  </div>
-                  <div className="text-center p-4 bg-[#0d0d0d] rounded-lg">
-                    <div className="text-2xl font-bold text-pink-400">90%</div>
-                    <div className="text-sm text-gray-300">PREDICTION MARKET POOLS</div>
-                  </div>
-                </div>
-                <div className="text-center text-sm text-gray-300">
-                  DISTRIBUTION BASED ON TOTAL VALUE LOCKED (TVL)
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Right Column */}
-            <div className="absolute right-8 space-y-8 w-[300px]">
               {/* Prediction Markets Box */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="p-6 bg-[#0d1a0d] rounded-xl border border-green-400/20"
+                className="w-[280px] p-6 bg-[#0d1a0d] rounded-xl border border-green-400/20"
               >
                 <h3 className={`${cornerstone.className} text-xl text-center text-green-400 mb-4`}>
                   PREDICTION MARKETS
@@ -216,13 +167,59 @@ export default function HowItWorks() {
                   WIN ROUNDS THROUGH SWAPS
                 </div>
               </motion.div>
+            </div>
+
+            {/* Middle Row - Fee Distribution */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="w-[600px] mx-auto mb-32 p-6 bg-[#1a0d1a] rounded-xl border border-pink-400/20"
+            >
+              <h3 className={`${cornerstone.className} text-xl text-center text-pink-400 mb-4`}>
+                PROTOCOL FEE DISTRIBUTION
+              </h3>
+              <div className="grid grid-cols-2 gap-8 mb-4">
+                <div className="text-center p-4 bg-[#0d0d0d] rounded-lg">
+                  <div className="text-2xl font-bold text-pink-400">10%</div>
+                  <div className="text-sm text-gray-300">$ORCA TOKEN HOLDERS</div>
+                </div>
+                <div className="text-center p-4 bg-[#0d0d0d] rounded-lg">
+                  <div className="text-2xl font-bold text-pink-400">90%</div>
+                  <div className="text-sm text-gray-300">PREDICTION MARKET POOLS</div>
+                </div>
+              </div>
+              <div className="text-center text-sm text-gray-300">
+                DISTRIBUTION BASED ON TOTAL VALUE LOCKED (TVL)
+              </div>
+            </motion.div>
+
+            {/* Bottom Row */}
+            <div className="flex justify-between items-start">
+              {/* Benefits Box */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="w-[280px] p-6 bg-[#0d1f1f] rounded-xl border border-cyan-400/20"
+              >
+                <h3 className={`${cornerstone.className} text-xl text-center text-cyan-400 mb-4`}>
+                  BENEFITS
+                </h3>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• ENHANCED $ORCA TOKEN UTILITY</li>
+                  <li>• REWARDS FOR TOKEN HOLDERS</li>
+                  <li>• GROWING ECOSYSTEM</li>
+                  <li>• DYNAMIC REWARD CYCLE</li>
+                </ul>
+              </motion.div>
 
               {/* Burn Mechanism Box */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="p-6 bg-[#1a0d0d] rounded-xl border border-red-400/20"
+                className="w-[280px] p-6 bg-[#1a0d0d] rounded-xl border border-red-400/20"
               >
                 <h3 className={`${cornerstone.className} text-xl text-center text-red-400 mb-4`}>
                   BURN MECHANISM
