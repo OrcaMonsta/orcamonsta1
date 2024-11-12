@@ -108,6 +108,112 @@ export default function HowItWorks() {
           ))}
         </div>
 
+        {/* Ecosystem Visualization */}
+        <div className="mb-16">
+          <h2 className={`${cornerstone.className} text-3xl font-bold text-center text-cyan-400 mb-12`}>
+            ORCA WHIRLPOOL ECOSYSTEM
+          </h2>
+          
+          <div className="relative backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
+            shadow-[0_0_50px_rgba(0,255,255,0.1)]">
+            
+            {/* Trading Tool Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-2xl mx-auto mb-12 p-6 bg-blue-400/10 rounded-xl border border-blue-400/20"
+            >
+              <h3 className={`${cornerstone.className} text-xl text-center text-blue-400 mb-4`}>
+                Automated Trading Tool
+              </h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Automated position management
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Backend unique key generation
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Similar to Bulbs/Photon platforms
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  High yield potential
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  Asset optimization system
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Fee Distribution Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="max-w-3xl mx-auto mb-12 p-6 bg-pink-400/10 rounded-xl border border-pink-400/20"
+            >
+              <h3 className={`${cornerstone.className} text-xl text-center text-pink-400 mb-4`}>
+                Protocol Fee Distribution
+              </h3>
+              <div className="flex justify-center gap-8 mb-4">
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
+                  <div className="text-2xl font-bold text-pink-400">10%</div>
+                  <div className="text-sm text-gray-300">$ORCA Token Holders</div>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
+                  <div className="text-2xl font-bold text-pink-400">90%</div>
+                  <div className="text-sm text-gray-300">Prediction Market Pools</div>
+                </div>
+              </div>
+              <div className="text-center text-gray-300 text-sm">
+                Distribution based on Total Value Locked (TVL)
+              </div>
+            </motion.div>
+
+            {/* Benefits Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="max-w-2xl mx-auto p-6 bg-cyan-400/10 rounded-xl border border-cyan-400/20"
+            >
+              <h3 className={`${cornerstone.className} text-xl text-center text-cyan-400 mb-4`}>
+                Benefits
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
+                  <div className="text-cyan-400 mb-2">Enhanced $ORCA token utility</div>
+                  <div className="text-sm text-gray-300">Increased value through ecosystem participation</div>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
+                  <div className="text-cyan-400 mb-2">Rewards for token holders</div>
+                  <div className="text-sm text-gray-300">Continuous benefits from protocol fees</div>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
+                  <div className="text-cyan-400 mb-2">Growing ecosystem</div>
+                  <div className="text-sm text-gray-300">Expanding features and opportunities</div>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
+                  <div className="text-cyan-400 mb-2">Dynamic reward cycle</div>
+                  <div className="text-sm text-gray-300">Adaptive benefits based on participation</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Connecting Arrows */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-1/2 left-1/4 w-1/2 h-[2px] bg-gradient-to-r from-blue-400/50 via-pink-400/50 to-cyan-400/50"></div>
+              <div className="absolute top-1/4 left-1/2 w-[2px] h-1/2 bg-gradient-to-b from-blue-400/50 to-pink-400/50"></div>
+            </div>
+          </div>
+        </div>
+
         {/* Expand Button */}
         <div className="text-center mb-8">
           <button
