@@ -84,34 +84,75 @@ export default function Roadmap() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
-        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-8`}>
+        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-12 text-center`}>
           {roadmapContent.title}
         </h1>
 
-        {/* Roadmap Section */}
-        <div className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
-          shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
-          transform transition-all duration-300 group overflow-hidden">
-          <div className="space-y-8">
+        {/* Visual Roadmap Timeline */}
+        <div className="relative mb-16">
+          {/* Central Timeline Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1">
+            <div className="h-full bg-gradient-to-b from-cyan-500/50 via-green-500/50 to-cyan-500/50 
+              animate-pulse rounded-full"></div>
+          </div>
+
+          {/* Phases */}
+          <div className="relative">
             {roadmapContent.phases.map((phase, index) => (
-              <div key={index} className="space-y-4">
-                <h3 className={`${cornerstone.className} text-xl font-bold text-cyan-400`}>
-                  {phase.name}
-                </h3>
-                <div className="space-y-3">
-                  {phase.points.map((point, pointIndex) => (
-                    <div key={pointIndex} className={`${cornerstone.className} text-gray-300 flex items-start group`}>
-                      <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
-                        <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent group-hover:from-cyan-400/70 transition-all duration-300" />
-                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
-                          <div className="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300" />
-                          <div className="absolute inset-[2px] bg-cyan-400/40 rounded-full animate-pulse" />
+              <div key={index} 
+                className={`mb-24 flex items-center ${
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                }`}
+              >
+                {/* Content Box */}
+                <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                  <div className="backdrop-blur-md bg-black/30 rounded-xl p-6 border border-gray-800/50 
+                    shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
+                    transform transition-all duration-300 group hover:scale-105 animate-fadeIn"
+                    style={{
+                      animationDelay: `${index * 200}ms`
+                    }}
+                  >
+                    <h3 className={`${cornerstone.className} text-xl font-bold text-cyan-400 mb-4`}>
+                      {phase.name}
+                    </h3>
+                    <div className="space-y-3">
+                      {phase.points.map((point, pointIndex) => (
+                        <div key={pointIndex} 
+                          className={`${cornerstone.className} text-gray-300 flex items-start group`}
+                          style={{
+                            animationDelay: `${(index * 200) + (pointIndex * 100)}ms`
+                          }}
+                        >
+                          <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                            <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                              group-hover:from-cyan-400/70 transition-all duration-300" />
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                              bg-cyan-400/40 rounded-full animate-pulse" />
+                          </div>
+                          <span className="text-sm">{point}</span>
                         </div>
-                      </div>
-                      <span className="mt-1">{point}</span>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
+
+                {/* Timeline Node */}
+                <div className="w-16 relative flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-black/30 border border-gray-800/50 
+                    backdrop-blur-md flex items-center justify-center group
+                    animate-fadeIn"
+                    style={{
+                      animationDelay: `${index * 200}ms`
+                    }}
+                  >
+                    <div className="w-4 h-4 rounded-full bg-cyan-400/40 animate-pulse 
+                      group-hover:bg-green-400/40 transition-all duration-300" />
+                  </div>
+                </div>
+
+                {/* Empty space for opposite side */}
+                <div className="w-[calc(50%-2rem)]"></div>
               </div>
             ))}
           </div>
