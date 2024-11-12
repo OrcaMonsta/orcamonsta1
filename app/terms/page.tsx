@@ -118,22 +118,19 @@ export default function Terms() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-12">
-        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-8`}>
+        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-2`}>
           TERMS OF SERVICE
         </h1>
+        
+        <p className={`${cornerstone.className} text-gray-300 mb-8`}>
+          LAST UPDATED: {new Date().toLocaleDateString('en-US', { 
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+          }).toUpperCase()}
+        </p>
 
         <div className="space-y-8">
-          {/* Last Updated - Now Dynamic */}
-          <div className="backdrop-blur-md bg-black/30 rounded-xl p-6 border border-gray-800/50 
-            shadow-[0_0_50px_rgba(0,255,255,0.1)]">
-            <p className={`${cornerstone.className} text-gray-300`}>
-              LAST UPDATED: {new Date().toLocaleDateString('en-US', { 
-                month: 'long',
-                year: 'numeric'
-              }).toUpperCase()}
-            </p>
-          </div>
-
           {/* Terms Sections */}
           {sections.map((section, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 

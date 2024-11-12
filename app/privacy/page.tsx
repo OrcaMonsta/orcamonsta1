@@ -194,22 +194,19 @@ export default function Privacy() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-12">
-        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-8`}>
+        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-2`}>
           PRIVACY POLICY
         </h1>
+        
+        <p className={`${cornerstone.className} text-gray-300 mb-8`}>
+          LAST UPDATED: {new Date().toLocaleDateString('en-US', { 
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+          }).toUpperCase()}
+        </p>
 
         <div className="space-y-8">
-          {/* Last Updated */}
-          <div className="backdrop-blur-md bg-black/30 rounded-xl p-6 border border-gray-800/50 
-            shadow-[0_0_50px_rgba(0,255,255,0.1)]">
-            <p className={`${cornerstone.className} text-gray-300`}>
-              LAST UPDATED: {new Date().toLocaleDateString('en-US', { 
-                month: 'long',
-                year: 'numeric'
-              }).toUpperCase()}
-            </p>
-          </div>
-
           {/* Privacy Sections */}
           {sections.map((section, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
@@ -220,6 +217,38 @@ export default function Privacy() {
                 <div className="absolute w-full h-full animate-pulse">
                   <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
                   <div className="absolute top-0 left-0 h-full w-[2px] bg-gradient-to-b from-cyan-500/50 to-transparent"></div>
+                </div>
+              </div>
+              
+              <div className="relative z-10">
+                <h2 className={`${cornerstone.className} text-2xl font-bold text-green-400 mb-4`}>
+                  {section.title}
+                </h2>
+                <div className="space-y-3">
+                  {section.content ? (
+                    // Render regular content
+                    section.content.map((text, textIndex) => (
+                      <p key={textIndex} className={`${cornerstone.className} text-gray-300`}>
+                        {text}
+                      </p>
+                    ))
+                  ) : section.subsections ? (
+                    // Render subsections
+                    section.subsections.map((subsection, subIndex) => (
+                      <div key={subIndex} className="mb-6 last:mb-0">
+                        <h3 className={`${cornerstone.className} text-xl font-bold text-cyan-400 mb-3`}>
+                          {subsection.subtitle}
+                        </h3>
+                        <div className="space-y-2">
+                          {subsection.points.map((point, pointIndex) => (
+                            <p key={pointIndex} className={`${cornerstone.className} text-gray-300`}>
+                              {point}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    ))
+                  ) : null}
                 </div>
               </div>
             </div>
