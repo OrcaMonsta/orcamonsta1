@@ -14,15 +14,23 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const contractAddress = "CALYAYTQWNYZA8WSZJSFNFUWUVMGKQE0F9HX9";
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   const menuItems = [
+    { 
+      name: "About",
+      subItems: [
+        { name: "About", href: "/about" },
+        { name: "How it works", href: "/how-it-works" },
+        { name: "Roadmap", href: "/roadmap" },
+        { name: "Whitepaper", href: "/under-construction" },
+        { name: "Team", href: "/under-construction" }
+      ]
+    },
     { name: "NFTs", href: "/under-construction" },
     { name: "Gobbler", href: "/under-construction" },
-    { name: "About", href: "/about" },
-    { name: "How it works", href: "/how-it-works" },
-    { name: "Roadmap", href: "/roadmap" },
-    { name: "Whitepaper", href: "/under-construction" },
-    { name: "Team", href: "/under-construction" },
+    { name: "Community", href: "/under-construction" },
+    { name: "Announcements", href: "/under-construction" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -115,28 +123,72 @@ export default function Home() {
         </button>
 
         {isMenuOpen && (
-          <div className="absolute top-full mt-2 w-48 backdrop-blur-md bg-black/30 rounded-2xl border border-gray-800/50 
-            shadow-[0_0_50px_rgba(0,255,255,0.1)] overflow-hidden animate-fadeIn">
-            {/* Menu Items Container */}
-            <div className="relative py-2">
-              {menuItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
-                >
-                  {/* Animated hover effect for each item */}
-                  <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
-                    scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
-                  
-                  <span className="relative z-10 flex items-center gap-2">
-                    {item.name}
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                      text-cyan-400">→</span>
-                  </span>
-                </a>
-              ))}
+          <div className="absolute top-full mt-2 flex gap-2">
+            {/* Main Menu */}
+            <div className="w-48 backdrop-blur-md bg-black/30 rounded-2xl border border-gray-800/50 
+              shadow-[0_0_50px_rgba(0,255,255,0.1)] overflow-hidden animate-fadeIn">
+              <div className="relative py-2">
+                {menuItems.map((item, index) => (
+                  <div key={index}>
+                    {item.subItems ? (
+                      <button
+                        className="w-full px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group flex items-center justify-between"
+                        onMouseEnter={() => setActiveSubmenu(item.name)}
+                        onMouseLeave={() => setActiveSubmenu(null)}
+                      >
+                        <span className="relative z-10 flex items-center gap-2">
+                          {item.name}
+                        </span>
+                        <span className="text-cyan-400">→</span>
+                      </button>
+                    ) : (
+                      <a
+                        href={item.href}
+                        className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
+                      >
+                        <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
+                          scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                        
+                        <span className="relative z-10 flex items-center gap-2">
+                          {item.name}
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                            text-cyan-400">→</span>
+                        </span>
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* Submenu */}
+            {activeSubmenu === 'About' && (
+              <div 
+                className="w-48 backdrop-blur-md bg-black/30 rounded-2xl border border-gray-800/50 
+                  shadow-[0_0_50px_rgba(0,255,255,0.1)] overflow-hidden animate-fadeIn"
+                onMouseEnter={() => setActiveSubmenu('About')}
+                onMouseLeave={() => setActiveSubmenu(null)}
+              >
+                <div className="relative py-2">
+                  {menuItems.find(item => item.name === 'About')?.subItems?.map((subItem, index) => (
+                    <a
+                      key={index}
+                      href={subItem.href}
+                      className="block px-4 py-2 hover:bg-white/10 transition-colors duration-300 relative group"
+                    >
+                      <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-cyan-500/50 to-green-500/50 
+                        scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                      
+                      <span className="relative z-10 flex items-center gap-2">
+                        {subItem.name}
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                          text-cyan-400">→</span>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
