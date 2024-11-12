@@ -140,9 +140,13 @@ export default function Terms() {
                       key={textIndex} 
                       className={`${cornerstone.className} text-gray-300 flex items-start group mb-3`}
                     >
-                      <div className="flex-shrink-0 w-3 h-3 mt-2 mr-4 relative">
-                        <div className="absolute inset-0 border border-cyan-500/30 rounded-full group-hover:border-cyan-400/50 transition-all duration-300" />
-                        <div className="absolute inset-[3px] bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300">
+                      {/* Horizontal line with dot bullet design */}
+                      <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
+                        {/* Horizontal line */}
+                        <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent group-hover:from-cyan-400/70 transition-all duration-300" />
+                        {/* Dot */}
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
+                          <div className="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300" />
                           <div className="absolute inset-[2px] bg-cyan-400/40 rounded-full animate-pulse" />
                         </div>
                       </div>
