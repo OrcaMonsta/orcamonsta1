@@ -403,7 +403,7 @@ export default function Home() {
         </div>
 
         {/* Terms and Privacy Links */}
-        <div className="flex gap-4 text-sm">
+        <div className="flex justify-center w-full gap-4 text-sm">
           <Link 
             href="/terms"
             className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 relative group"
