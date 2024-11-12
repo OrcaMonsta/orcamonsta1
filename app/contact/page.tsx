@@ -77,15 +77,29 @@ export default function Contact() {
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-green-500/10 rounded-full blur-[128px] animate-pulse delay-700" />
       </div>
 
+      {/* Navigation */}
+      <nav className="relative z-10 p-6">
+        <Link 
+          href="/"
+          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Home
+        </Link>
+      </nav>
+
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-12">
-        <div className="opacity-0 animate-[fadeIn_0.8s_ease-in-out_forwards]">
+        <div className="animate-fadeIn">
           <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-8 text-center`}>
             CONTACT US
           </h1>
 
           <div className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
-            shadow-[0_0_50px_rgba(0,255,255,0.1)]">
+            shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
+            transform transition-all duration-300">
             
             {/* Feature Selection */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">

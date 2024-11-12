@@ -247,22 +247,27 @@ export default function Privacy() {
                 </h2>
                 <div className="space-y-3">
                   {section.content ? (
-                    // Render regular content
+                    // Render regular content with new bullets
                     section.content.map((text, textIndex) => (
                       <div 
                         key={textIndex} 
                         className={`${cornerstone.className} text-gray-300 flex items-start group mb-3`}
                       >
-                        <div className="flex-shrink-0 w-6 h-6 mr-3 relative">
-                          <div className="absolute inset-0 bg-cyan-500/20 rounded-sm transform rotate-45" />
-                          <div className="absolute inset-[2px] bg-cyan-500/10 rounded-sm transform rotate-45 group-hover:bg-cyan-500/20 transition-all duration-300" />
-                          <div className="absolute inset-[3px] border border-cyan-500/30 rounded-sm transform rotate-45" />
+                        {/* Horizontal line with dot bullet design */}
+                        <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
+                          {/* Horizontal line */}
+                          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent group-hover:from-cyan-400/70 transition-all duration-300" />
+                          {/* Dot */}
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
+                            <div className="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300" />
+                            <div className="absolute inset-[2px] bg-cyan-400/40 rounded-full animate-pulse" />
+                          </div>
                         </div>
                         <span className="mt-1">{text}</span>
                       </div>
                     ))
                   ) : section.subsections ? (
-                    // Render subsections
+                    // Render subsections with matching style but different color
                     section.subsections.map((subsection, subIndex) => (
                       <div key={subIndex} className="mb-6 last:mb-0">
                         <h3 className={`${cornerstone.className} text-xl font-bold text-cyan-400 mb-3`}>
@@ -274,10 +279,15 @@ export default function Privacy() {
                               key={pointIndex} 
                               className={`${cornerstone.className} text-gray-300 flex items-start group`}
                             >
-                              <div className="flex-shrink-0 w-4 h-4 mr-3 relative mt-1">
-                                <div className="absolute inset-0 bg-green-500/20 rounded-sm transform rotate-45" />
-                                <div className="absolute inset-[1px] bg-green-500/10 rounded-sm transform rotate-45 group-hover:bg-green-500/20 transition-all duration-300" />
-                                <div className="absolute inset-[2px] border border-green-500/30 rounded-sm transform rotate-45" />
+                              {/* Subsection bullet with green color scheme */}
+                              <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
+                                {/* Horizontal line */}
+                                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-green-500/50 to-transparent group-hover:from-green-400/70 transition-all duration-300" />
+                                {/* Dot */}
+                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
+                                  <div className="absolute inset-0 bg-green-500/20 rounded-full group-hover:bg-green-400/30 transition-all duration-300" />
+                                  <div className="absolute inset-[2px] bg-green-400/40 rounded-full animate-pulse" />
+                                </div>
                               </div>
                               <span>{point}</span>
                             </div>
