@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import localFont from 'next/font/local'
+import Link from 'next/link'
 
 const cornerstone = localFont({ 
   src: '../../public/cornerstone.ttf',
@@ -15,14 +16,14 @@ const MobilePage = () => {
   const contractAddress = "CALYAYTQWNYZA8WSZJSFNFUWUVMGKQE0F9HX9";
 
   const menuItems = [
+    { name: "NFTs", href: "/under-construction" },
+    { name: "Gobbler", href: "/under-construction" },
     { name: "About", href: "/about" },
     { name: "How it works", href: "/how-it-works" },
     { name: "Roadmap", href: "/roadmap" },
     { name: "Whitepaper", href: "/under-construction" },
     { name: "Team", href: "/under-construction" },
-    { name: "Contact", href: "/contact" },
-    { name: "Terms", href: "/terms" },
-    { name: "Privacy", href: "/privacy" }
+    { name: "Contact", href: "/contact" }
   ];
 
   const copyToClipboard = () => {
@@ -283,6 +284,24 @@ const MobilePage = () => {
             </svg>
             Telegram
           </a>
+        </div>
+
+        {/* Terms and Privacy Links */}
+        <div className="flex justify-center gap-4 text-sm mt-4">
+          <Link 
+            href="/terms"
+            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 relative group"
+          >
+            Terms
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link 
+            href="/privacy"
+            className="text-gray-400 hover:text-green-400 transition-colors duration-300 relative group"
+          >
+            Privacy
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
         </div>
       </div>
     </div>
