@@ -345,77 +345,80 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Social Links */}
-      <div className="absolute bottom-10 right-10 flex gap-6">
-        <a 
-          href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
-        >
-          <div className="w-5 h-5 relative">
-            <Image
-              src="/dexscreener.png"
-              alt="DexScreener"
-              fill
-              className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
-              style={{
-                filter: 'brightness(0.8)',
-                opacity: '0.8'
-              }}
-              priority
-            />
-          </div>
-          <span>DexScreener</span>
-        </a>
-        <a 
-          href="https://x.com/OrcaMonsta" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="hover:text-blue-400 transition-colors duration-300 flex items-center gap-2"
-        >
-          <svg 
-            className="w-5 h-5" 
-            fill="currentColor" 
-            viewBox="0 0 24 24"
+      {/* Social Links and Terms/Privacy Container */}
+      <div className="absolute bottom-10 right-10 flex flex-col items-end gap-4">
+        {/* Social Links */}
+        <div className="flex gap-6">
+          <a 
+            href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
           >
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-          Twitter
-        </a>
-        <a 
-          href="https://t.me/orca_monsta" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2"
-        >
-          <svg 
-            className="w-5 h-5" 
-            fill="currentColor" 
-            viewBox="0 0 24 24"
+            <div className="w-5 h-5 relative">
+              <Image
+                src="/dexscreener.png"
+                alt="DexScreener"
+                fill
+                className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
+                style={{
+                  filter: 'brightness(0.8)',
+                  opacity: '0.8'
+                }}
+                priority
+              />
+            </div>
+            <span>DexScreener</span>
+          </a>
+          <a 
+            href="https://x.com/OrcaMonsta" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-blue-400 transition-colors duration-300 flex items-center gap-2"
           >
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.411-.168.56-.505 1.287-.832 1.287-.319 0-.607-.297-.866-.53-.484-.434-2.747-1.791-3.267-2.151-.52-.36-1.013-.538-.505-1.287.507-.749 2.306-2.156 3.267-3.079.292-.28.558-.792-.053-.792s-2.179 1.372-3.267 2.151c-1.088.779-2.036.805-2.906.531-.87-.274-1.665-.531-1.665-.531s-.585-.234-.319-.766c.266-.532 1.665-1.287 1.665-1.287s2.473-1.019 4.239-1.688c1.766-.669 3.452-.938 3.825-.938.373 0 1.114.134.93.851z"/>
-          </svg>
-          Telegram
-        </a>
-      </div>
+            <svg 
+              className="w-5 h-5" 
+              fill="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            Twitter
+          </a>
+          <a 
+            href="https://t.me/orca_monsta" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2"
+          >
+            <svg 
+              className="w-5 h-5" 
+              fill="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.411-.168.56-.505 1.287-.832 1.287-.319 0-.607-.297-.866-.53-.484-.434-2.747-1.791-3.267-2.151-.52-.36-1.013-.538-.505-1.287.507-.749 2.306-2.156 3.267-3.079.292-.28.558-.792-.053-.792s-2.179 1.372-3.267 2.151c-1.088.779-2.036.805-2.906.531-.87-.274-1.665-.531-1.665-.531s-.585-.234-.319-.766c.266-.532 1.665-1.287 1.665-1.287s2.473-1.019 4.239-1.688c1.766-.669 3.452-.938 3.825-.938.373 0 1.114.134.93.851z"/>
+            </svg>
+            Telegram
+          </a>
+        </div>
 
-      {/* Terms and Privacy Links */}
-      <div className="absolute bottom-4 right-10 flex gap-4 text-sm">
-        <Link 
-          href="/terms"
-          className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 relative group"
-        >
-          Terms
-          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-        <Link 
-          href="/privacy"
-          className="text-gray-400 hover:text-green-400 transition-colors duration-300 relative group"
-        >
-          Privacy
-          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-        </Link>
+        {/* Terms and Privacy Links */}
+        <div className="flex gap-4 text-sm">
+          <Link 
+            href="/terms"
+            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 relative group"
+          >
+            Terms
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link 
+            href="/privacy"
+            className="text-gray-400 hover:text-green-400 transition-colors duration-300 relative group"
+          >
+            Privacy
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+        </div>
       </div>
     </main>
   )
