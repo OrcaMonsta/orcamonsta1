@@ -116,7 +116,7 @@ export default function HowItWorks() {
           
           <div className="relative bg-black min-h-[800px] max-w-[1400px] mx-auto p-16">
             {/* Top Row */}
-            <div className="flex justify-between items-start mb-32">
+            <div className="flex justify-between items-start gap-32 mb-32">
               {/* Users Box */}
               <motion.div
                 initial={{ opacity: 0 }}
@@ -189,7 +189,7 @@ export default function HowItWorks() {
             </motion.div>
 
             {/* Bottom Row */}
-            <div className="flex justify-between items-start">
+            <div className="flex justify-between items-start px-32">
               {/* Benefits Box */}
               <motion.div
                 initial={{ opacity: 0 }}
@@ -230,39 +230,51 @@ export default function HowItWorks() {
                 </marker>
               </defs>
               <g>
-                {/* Horizontal Arrows */}
+                {/* Users to Trading Tool */}
                 <motion.path 
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
-                  d="M300 100 H450" 
-                  stroke="rgba(147, 197, 253, 0.4)" 
-                  strokeWidth="2" 
-                  markerEnd="url(#arrowhead)" 
-                />
-                <motion.path 
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  d="M750 100 H900" 
+                  d="M320 80 H480" 
                   stroke="rgba(147, 197, 253, 0.4)" 
                   strokeWidth="2" 
                   markerEnd="url(#arrowhead)" 
                 />
 
-                {/* Vertical Arrows */}
+                {/* Trading Tool to Prediction Markets */}
                 <motion.path 
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
-                  d="M600 200 V300" 
+                  d="M920 80 H1080" 
                   stroke="rgba(147, 197, 253, 0.4)" 
                   strokeWidth="2" 
                   markerEnd="url(#arrowhead)" 
                 />
 
-                {/* Curved Return Arrow */}
+                {/* Trading Tool to Fee Distribution */}
                 <motion.path 
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
-                  d="M200 400 Q150 250 200 100" 
+                  d="M700 180 V300" 
+                  stroke="rgba(147, 197, 253, 0.4)" 
+                  strokeWidth="2" 
+                  markerEnd="url(#arrowhead)" 
+                />
+
+                {/* Fee Distribution to Benefits */}
+                <motion.path 
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  d="M450 400 H320" 
+                  stroke="rgba(147, 197, 253, 0.4)" 
+                  strokeWidth="2" 
+                  markerEnd="url(#arrowhead)" 
+                />
+
+                {/* Benefits to Users (dotted return) */}
+                <motion.path 
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  d="M250 450 Q150 250 250 80" 
                   stroke="rgba(34, 197, 94, 0.4)" 
                   strokeWidth="2" 
                   strokeDasharray="4 2"
