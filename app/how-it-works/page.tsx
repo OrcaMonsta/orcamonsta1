@@ -114,132 +114,124 @@ export default function HowItWorks() {
             ORCA WHIRLPOOL ECOSYSTEM
           </h2>
           
-          <div className="relative backdrop-blur-md bg-black/30 rounded-xl p-12 border border-gray-800/50 
-            shadow-[0_0_50px_rgba(0,255,255,0.1)]">
+          <div className="relative backdrop-blur-md bg-[#080c14] rounded-xl border border-gray-800/50 
+            shadow-[0_0_50px_rgba(0,255,255,0.1)] h-[600px] max-w-[1200px] mx-auto p-8">
             
-            {/* Users Section - Left Side */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="absolute left-12 top-1/4 w-64 p-6 bg-purple-400/10 rounded-xl border border-purple-400/20"
-            >
-              <h3 className={`${cornerstone.className} text-lg text-center text-purple-400 mb-4`}>
-                USERS
-              </h3>
-              <div className="text-center space-y-2">
-                <div className="text-gray-300 text-sm">
-                  investing into specific pools
+            {/* Left Column */}
+            <div className="absolute left-8 space-y-8 w-[300px]">
+              {/* Users Box */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="p-6 bg-[#1a1528] rounded-xl border border-purple-400/20"
+              >
+                <h3 className={`${cornerstone.className} text-xl text-center text-purple-400 mb-4`}>
+                  USERS
+                </h3>
+                <div className="text-center text-gray-300">
+                  INVESTING INTO SPECIFIC POOLS
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Trading Tool Section - Center Top */}
-            <motion.div 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-md mx-auto mb-12 p-6 bg-blue-400/10 rounded-xl border border-blue-400/20"
-            >
-              <h3 className={`${cornerstone.className} text-lg text-center text-blue-400 mb-4`}>
-                AUTOMATED ORCA WHIRLPOOL PROTOCOL
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                  Automated position management
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                  Backend unique key generation
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                  Similar to Bulbs/Photon platforms
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                  High yield potential
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                  Asset optimization system
-                </li>
-              </ul>
-            </motion.div>
+              {/* Benefits Box */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="p-6 bg-[#0d1f1f] rounded-xl border border-cyan-400/20"
+              >
+                <h3 className={`${cornerstone.className} text-xl text-center text-cyan-400 mb-4`}>
+                  BENEFITS
+                </h3>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• ENHANCED $ORCA TOKEN UTILITY</li>
+                  <li>• REWARDS FOR TOKEN HOLDERS</li>
+                  <li>• GROWING ECOSYSTEM</li>
+                  <li>• DYNAMIC REWARD CYCLE</li>
+                </ul>
+              </motion.div>
+            </div>
 
-            {/* Prediction Markets - Right Side */}
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="absolute right-12 top-1/4 w-64 p-6 bg-green-400/10 rounded-xl border border-green-400/20"
-            >
-              <h3 className={`${cornerstone.className} text-lg text-center text-green-400 mb-4`}>
-                PREDICTION MARKETS
-              </h3>
-              <div className="text-center text-sm text-gray-300">
-                Win rounds through swaps
-              </div>
-            </motion.div>
+            {/* Center Column */}
+            <div className="absolute left-1/2 -translate-x-1/2 space-y-8 w-[500px]">
+              {/* Protocol Box */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="p-6 bg-[#0d1528] rounded-xl border border-blue-400/20"
+              >
+                <h3 className={`${cornerstone.className} text-xl text-center text-blue-400 mb-4`}>
+                  AUTOMATED ORCA WHIRLPOOL PROTOCOL
+                </h3>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• AUTOMATED POSITION MANAGEMENT</li>
+                  <li>• BACKEND UNIQUE KEY GENERATION</li>
+                  <li>• SIMILAR TO BULBS/PHOTON PLATFORMS</li>
+                  <li>• HIGH YIELD POTENTIAL</li>
+                  <li>• ASSET OPTIMIZATION SYSTEM</li>
+                </ul>
+              </motion.div>
 
-            {/* Fee Distribution - Center */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-lg mx-auto p-6 bg-pink-400/10 rounded-xl border border-pink-400/20"
-            >
-              <h3 className={`${cornerstone.className} text-lg text-center text-pink-400 mb-4`}>
-                PROTOCOL FEE DISTRIBUTION
-              </h3>
-              <div className="flex justify-center gap-8">
-                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
-                  <div className="text-xl font-bold text-pink-400">10%</div>
-                  <div className="text-sm text-gray-300">$ORCA Token Holders</div>
+              {/* Fee Distribution Box */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                className="p-6 bg-[#1a0d1a] rounded-xl border border-pink-400/20"
+              >
+                <h3 className={`${cornerstone.className} text-xl text-center text-pink-400 mb-4`}>
+                  PROTOCOL FEE DISTRIBUTION
+                </h3>
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="text-center p-4 bg-[#0d0d0d] rounded-lg">
+                    <div className="text-2xl font-bold text-pink-400">10%</div>
+                    <div className="text-sm text-gray-300">$ORCA TOKEN HOLDERS</div>
+                  </div>
+                  <div className="text-center p-4 bg-[#0d0d0d] rounded-lg">
+                    <div className="text-2xl font-bold text-pink-400">90%</div>
+                    <div className="text-sm text-gray-300">PREDICTION MARKET POOLS</div>
+                  </div>
                 </div>
-                <div className="text-center p-4 bg-black/30 rounded-lg border border-gray-800/50">
-                  <div className="text-xl font-bold text-pink-400">90%</div>
-                  <div className="text-sm text-gray-300">Prediction Market Pools</div>
+                <div className="text-center text-sm text-gray-300">
+                  DISTRIBUTION BASED ON TOTAL VALUE LOCKED (TVL)
                 </div>
-              </div>
-              <div className="text-center mt-4 text-sm text-gray-300">
-                Distribution based on Total Value Locked (TVL)
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
-            {/* Benefits - Left Bottom */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="absolute left-12 bottom-1/4 w-64 p-6 bg-cyan-400/10 rounded-xl border border-cyan-400/20"
-            >
-              <h3 className={`${cornerstone.className} text-lg text-center text-cyan-400 mb-4`}>
-                BENEFITS
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• Enhanced $ORCA token utility</li>
-                <li>• Rewards for token holders</li>
-                <li>• Growing ecosystem</li>
-                <li>• Dynamic reward cycle</li>
-              </ul>
-            </motion.div>
+            {/* Right Column */}
+            <div className="absolute right-8 space-y-8 w-[300px]">
+              {/* Prediction Markets Box */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="p-6 bg-[#0d1a0d] rounded-xl border border-green-400/20"
+              >
+                <h3 className={`${cornerstone.className} text-xl text-center text-green-400 mb-4`}>
+                  PREDICTION MARKETS
+                </h3>
+                <div className="text-center text-gray-300">
+                  WIN ROUNDS THROUGH SWAPS
+                </div>
+              </motion.div>
 
-            {/* Token Burn - Right Bottom */}
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="absolute right-12 bottom-1/4 w-64 p-6 bg-red-400/10 rounded-xl border border-red-400/20"
-            >
-              <h3 className={`${cornerstone.className} text-lg text-center text-red-400 mb-4`}>
-                BURN MECHANISM
-              </h3>
-              <div className="text-center text-sm text-gray-300">
-                Inherent burn functions reduce total supply of token
-              </div>
-            </motion.div>
+              {/* Burn Mechanism Box */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="p-6 bg-[#1a0d0d] rounded-xl border border-red-400/20"
+              >
+                <h3 className={`${cornerstone.className} text-xl text-center text-red-400 mb-4`}>
+                  BURN MECHANISM
+                </h3>
+                <div className="text-center text-gray-300">
+                  INHERENT BURN FUNCTIONS REDUCE TOTAL SUPPLY OF TOKEN
+                </div>
+              </motion.div>
+            </div>
 
             {/* Flow Arrows */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
@@ -253,16 +245,13 @@ export default function HowItWorks() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                {/* User to Trading Tool */}
-                <path d="M280 200 L400 200" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                {/* Trading Tool to Prediction Markets */}
-                <path d="M520 200 L640 200" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                {/* Prediction Markets to Fee Distribution */}
-                <path d="M640 250 L520 300" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                {/* Fee Distribution to Benefits */}
-                <path d="M400 300 L280 300" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                {/* Circular flow back to Users */}
-                <path d="M280 300 Q200 250 280 200" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" strokeDasharray="4 2" markerEnd="url(#arrowhead)" />
+                {/* Horizontal Arrows */}
+                <path d="M310 150 H590" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
+                <path d="M590 400 H310" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
+                
+                {/* Vertical and Diagonal Arrows */}
+                <path d="M600 200 L600 350" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" markerEnd="url(#arrowhead)" />
+                <path d="M300 350 Q250 275 300 200" stroke="rgba(147, 197, 253, 0.4)" strokeWidth="2" strokeDasharray="4 2" markerEnd="url(#arrowhead)" />
               </motion.g>
             </svg>
           </div>
