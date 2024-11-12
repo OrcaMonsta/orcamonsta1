@@ -15,7 +15,7 @@ export default function Home() {
   const contractAddress = "CALYAYTQWNYZA8WSZJSFNFUWUVMGKQE0F9HX9";
 
   const menuItems = [
-    { name: "About", href: "/under-construction" },
+    { name: "About", href: "/about" },
     { name: "How it works", href: "/how-it-works" },
     { name: "Roadmap", href: "/under-construction" },
     { name: "Whitepaper", href: "/under-construction" },

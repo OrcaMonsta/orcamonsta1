@@ -15,14 +15,14 @@ const MobilePage = () => {
   const contractAddress = "CALYAYTQWNYZA8WSZJSFNFUWUVMGKQE0F9HX9";
 
   const menuItems = [
-    { name: "About", href: "/under-construction" },
-    { name: "How it works", href: "/under-construction" },
+    { name: "About", href: "/about" },
+    { name: "How it works", href: "/how-it-works" },
     { name: "Roadmap", href: "/under-construction" },
     { name: "Whitepaper", href: "/under-construction" },
     { name: "Team", href: "/under-construction" },
-    { name: "Contact", href: "/under-construction" },
-    { name: "Terms", href: "/under-construction" },
-    { name: "Privacy", href: "/under-construction" }
+    { name: "Contact", href: "/contact" },
+    { name: "Terms", href: "/terms" },
+    { name: "Privacy", href: "/privacy" }
   ];
 
   const copyToClipboard = () => {
