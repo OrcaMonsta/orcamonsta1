@@ -20,7 +20,7 @@ export default function Home() {
     { name: "Roadmap", href: "/under-construction" },
     { name: "Whitepaper", href: "/under-construction" },
     { name: "Team", href: "/under-construction" },
-    { name: "Contact", href: "/under-construction" },
+    { name: "Contact", href: "/contact" },
     { name: "Terms", href: "/terms" },
     { name: "Privacy", href: "/privacy" }
 ];
