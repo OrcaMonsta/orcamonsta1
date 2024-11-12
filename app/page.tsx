@@ -17,7 +17,7 @@ export default function Home() {
   const menuItems = [
     { name: "About", href: "/about" },
     { name: "How it works", href: "/how-it-works" },
-    { name: "Roadmap", href: "/under-construction" },
+    { name: "Roadmap", href: "/roadmap" },
     { name: "Whitepaper", href: "/under-construction" },
     { name: "Team", href: "/under-construction" },
     { name: "Contact", href: "/contact" },
