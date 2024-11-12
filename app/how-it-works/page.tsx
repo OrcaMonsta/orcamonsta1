@@ -116,8 +116,8 @@ export default function HowItWorks() {
           
           <div className="relative bg-black min-h-[800px] max-w-[1400px] mx-auto p-16">
             {/* Top Row */}
-            <div className="flex justify-between items-start gap-32 mb-32">
-              {/* Users Box */}
+            <div className="flex justify-between mb-32">
+              {/* Users Box - Left */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -131,7 +131,7 @@ export default function HowItWorks() {
                 </div>
               </motion.div>
 
-              {/* Trading Tool Box */}
+              {/* Trading Tool Box - Center */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -149,7 +149,7 @@ export default function HowItWorks() {
                 </ul>
               </motion.div>
 
-              {/* Prediction Markets Box */}
+              {/* Prediction Markets Box - Right */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -189,8 +189,8 @@ export default function HowItWorks() {
             </motion.div>
 
             {/* Bottom Row */}
-            <div className="flex justify-between items-start px-32">
-              {/* Benefits Box */}
+            <div className="flex justify-between px-32">
+              {/* Benefits Box - Left */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -207,7 +207,7 @@ export default function HowItWorks() {
                 </ul>
               </motion.div>
 
-              {/* Burn Mechanism Box */}
+              {/* Burn Mechanism Box - Right */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -221,67 +221,6 @@ export default function HowItWorks() {
                 </div>
               </motion.div>
             </div>
-
-            {/* Arrows */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none">
-              <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="rgba(147, 197, 253, 0.4)" />
-                </marker>
-              </defs>
-              <g>
-                {/* Users to Trading Tool */}
-                <motion.path 
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  d="M320 80 H480" 
-                  stroke="rgba(147, 197, 253, 0.4)" 
-                  strokeWidth="2" 
-                  markerEnd="url(#arrowhead)" 
-                />
-
-                {/* Trading Tool to Prediction Markets */}
-                <motion.path 
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  d="M920 80 H1080" 
-                  stroke="rgba(147, 197, 253, 0.4)" 
-                  strokeWidth="2" 
-                  markerEnd="url(#arrowhead)" 
-                />
-
-                {/* Trading Tool to Fee Distribution */}
-                <motion.path 
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  d="M700 180 V300" 
-                  stroke="rgba(147, 197, 253, 0.4)" 
-                  strokeWidth="2" 
-                  markerEnd="url(#arrowhead)" 
-                />
-
-                {/* Fee Distribution to Benefits */}
-                <motion.path 
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  d="M450 400 H320" 
-                  stroke="rgba(147, 197, 253, 0.4)" 
-                  strokeWidth="2" 
-                  markerEnd="url(#arrowhead)" 
-                />
-
-                {/* Benefits to Users (dotted return) */}
-                <motion.path 
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  d="M250 450 Q150 250 250 80" 
-                  stroke="rgba(34, 197, 94, 0.4)" 
-                  strokeWidth="2" 
-                  strokeDasharray="4 2"
-                  markerEnd="url(#arrowhead)" 
-                />
-              </g>
-            </svg>
 
             {/* Bottom Text */}
             <div className="text-center text-green-400 text-sm mt-16">
