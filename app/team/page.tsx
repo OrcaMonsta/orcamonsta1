@@ -68,7 +68,37 @@ export default function Team() {
           {teamMembers.map((member, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
               shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]">
-              {/* Member card components */}
+              {/* Member Name */}
+              <h2 className={`${cornerstone.className} text-2xl text-green-400 mb-2`}>
+                {member.name}
+              </h2>
+              
+              {/* Role */}
+              <h3 className={`${cornerstone.className} text-cyan-400 mb-4`}>
+                {member.role}
+              </h3>
+              
+              {/* Description */}
+              <p className={`${cornerstone.className} text-gray-300 mb-6`}>
+                {member.description}
+              </p>
+              
+              {/* Expertise */}
+              <div>
+                <h4 className={`${cornerstone.className} text-gray-400 mb-2`}>EXPERTISE</h4>
+                <ul className="space-y-2">
+                  {member.expertise.map((skill, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" 
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span className={`${cornerstone.className} text-gray-300`}>{skill}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
