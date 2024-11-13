@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import localFont from 'next/font/local'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 const cornerstone = localFont({ 
   src: '../../public/cornerstone.ttf',
@@ -106,6 +107,36 @@ export default function HowItWorks() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Ecosystem Container */}
+        <div className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
+          shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
+          transform transition-all duration-300 mb-12">
+          {/* Animated corner effects */}
+          <div className="absolute top-0 left-0 w-32 h-32">
+            <div className="absolute w-full h-full animate-pulse">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
+              <div className="absolute top-0 left-0 h-full w-[2px] bg-gradient-to-b from-cyan-500/50 to-transparent"></div>
+            </div>
+          </div>
+          
+          <div className="relative z-10">
+            <h2 className={`${cornerstone.className} text-2xl font-bold text-green-400 mb-6`}>
+              ORCA MONSTA WHIRLPOOL ECOSYSTEM
+            </h2>
+            
+            {/* Flowchart Image */}
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/Ecosystemflowchart.png"
+                alt="Orca Monsta Whirlpool Ecosystem Flowchart"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
         </div>
 
         {/* Expand Button */}
