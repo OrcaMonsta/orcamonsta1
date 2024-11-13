@@ -24,7 +24,8 @@ export default function Home() {
         { name: "How it works", href: "/how-it-works" },
         { name: "Roadmap", href: "/roadmap" },
         { name: "Whitepaper", href: "/under-construction" },
-        { name: "Team", href: "/under-construction" }
+        { name: "Team", href: "/under-construction" },
+        { name: "Ecosystem", href: "/under-construction" }
       ]
     },
     { name: "NFTs", href: "/under-construction" },
@@ -355,7 +356,7 @@ export default function Home() {
             rel="noopener noreferrer" 
             className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
           >
-            <div className="w-5 h-5 relative">
+            <div className="w-6 h-6 relative">
               <Image
                 src="/dexscreener.png"
                 alt="DexScreener"

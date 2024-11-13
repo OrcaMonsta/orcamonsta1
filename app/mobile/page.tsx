@@ -24,7 +24,8 @@ const MobilePage = () => {
         { name: "How it works", href: "/how-it-works" },
         { name: "Roadmap", href: "/roadmap" },
         { name: "Whitepaper", href: "/under-construction" },
-        { name: "Team", href: "/under-construction" }
+        { name: "Team", href: "/under-construction" },
+        { name: "Ecosystem", href: "/under-construction" }
       ]
     },
     { name: "NFTs", href: "/under-construction" },
