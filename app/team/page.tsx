@@ -22,7 +22,7 @@ export default function Team() {
     {
       name: "KRYPTTOR",
       role: "GENERAL MANAGER & DEVELOPER ",
-      description: "OVER 10 YEARS OF EXPERIENCE IN THE CRYPTO SPACE, 6+ YEARS OF EXPERIENCE IN DEVELOPMENT & PROGRAMMING.",
+      description: "OVER 12 YEARS OF EXPERIENCE IN THE CRYPTO SPACE, 6+ YEARS OF EXPERIENCE IN DEVELOPMENT & PROGRAMMING.",
       expertise: ["PROJECT MANAGEMENT", "DEVELOPMENT", "PROGRAMMING", "DESIGN"],
       image: "/Krypttor.jpeg"
     },
