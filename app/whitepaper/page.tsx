@@ -11,13 +11,15 @@ const cornerstone = localFont({
 
 // Add this function to handle the PDF download
 const handleDownload = () => {
-  // Direct link to your PDF file in the public folder
-  const pdfUrl = '/whitepaper.pdf';
+  // Direct link to the PDF file in the public folder
+  const pdfUrl = '/Whitepaper.pdf';  // Make sure this matches the exact filename in your public folder
   
   // Create a link element
   const link = document.createElement('a');
   link.href = pdfUrl;
-  link.download = 'Orca_Monsta_Whitepaper.pdf'; // Name of the file when downloaded
+  link.setAttribute('download', 'Whitepaper.pdf');  // Set the download filename
+  
+  // Trigger the download
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
