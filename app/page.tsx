@@ -30,8 +30,8 @@ export default function Home() {
     },
     { name: "NFTs", href: "/under-construction" },
     { name: "Gobbler", href: "/under-construction" },
-    { name: "Community", href: "/under-construction" },
-    { name: "Announcements", href: "/under-construction" },
+    { name: "Community", href: "/community" },
+    { name: "Announcements", href: "/announcements" },
     { name: "Contact", href: "/contact" }
   ];
 

@@ -81,7 +81,7 @@ export default function Community() {
               transform transition-all duration-300"
           >
             <h2 className={`${cornerstone.className} text-2xl text-green-400 mb-4`}>TWITTER</h2>
-            <p className="text-gray-300 mb-4">Follow us on Twitter for the latest news and announcements.</p>
+            <p className="text-gray-300 mb-4">Follow us on Twitter for the latest news and announcements about Orca Monsta.</p>
             <a 
               href="https://x.com/OrcaMonsta" 
               target="_blank"
@@ -104,9 +104,9 @@ export default function Community() {
               transform transition-all duration-300"
           >
             <h2 className={`${cornerstone.className} text-2xl text-green-400 mb-4`}>DISCORD</h2>
-            <p className="text-gray-300 mb-4">Join our Discord server for community events and support.</p>
+            <p className="text-gray-300 mb-4">Join our Discord server for community events and support and even more discussion and collaboration.</p>
             <a 
-              href="#" 
+              href="https://discord.gg/93CMsHcm" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
