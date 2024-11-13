@@ -165,18 +165,37 @@ export default function Contact() {
             </form>
 
             {/* Social Links */}
-            <div className="mt-8 flex justify-center gap-6">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${cornerstone.className} text-gray-400 hover:text-cyan-400 transition-colors`}
-                >
-                  {link.name}
-                </a>
-              ))}
+            <div className="flex flex-wrap justify-center gap-6">
+              <a
+                href="https://t.me/orca_monsta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
+                  border border-cyan-500/50 rounded-lg hover:shadow-[0_0_30px_rgba(0,255,255,0.3)]
+                  transition-all duration-300"
+              >
+                TELEGRAM
+              </a>
+              <a
+                href="https://x.com/OrcaMonsta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
+                  border border-cyan-500/50 rounded-lg hover:shadow-[0_0_30px_rgba(0,255,255,0.3)]
+                  transition-all duration-300"
+              >
+                TWITTER
+              </a>
+              <a
+                href="https://discord.com/invite/93CMsHcm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
+                  border border-cyan-500/50 rounded-lg hover:shadow-[0_0_30px_rgba(0,255,255,0.3)]
+                  transition-all duration-300"
+              >
+                DISCORD
+              </a>
             </div>
           </div>
         </div>
