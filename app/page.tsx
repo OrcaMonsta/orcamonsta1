@@ -356,15 +356,15 @@ export default function Home() {
             rel="noopener noreferrer" 
             className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
           >
-            <div className="w-6 h-6 relative">
+            <div className="w-7 h-7 relative">
               <Image
                 src="/dexscreener.png"
                 alt="DexScreener"
                 fill
                 className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
                 style={{
-                  filter: 'brightness(0.8)',
-                  opacity: '0.8'
+                  filter: 'brightness(0.9)',
+                  opacity: '0.9'
                 }}
                 priority
               />
