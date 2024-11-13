@@ -15,7 +15,7 @@ const announcements = [
   {
     date: "2024-10-30",
     title: "PLATFORM LAUNCH ANNOUNCEMENT",
-    content: "We are excited to announce the official launch of the Orca Monsta platform...",
+    content: "We are excited to announce the official launch of the Orca Monsta platform.",
     category: "LAUNCH",
     important: true
   },
