@@ -220,6 +220,17 @@ export default function About() {
                   </div>
                 </div>
               ))}
+              
+              <div className="space-y-4 backdrop-blur-md bg-black/30 rounded-xl p-6 border border-gray-800/50
+                shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
+                transform transition-all duration-300">
+                <h3 className={`${cornerstone.className} text-xl font-bold text-cyan-400`}>
+                  MORE TOKENS COMING SOON
+                </h3>
+                <p className={`${cornerstone.className} text-gray-400`}>
+                  STAY TUNED FOR ADDITIONAL TOKENS THAT WILL FURTHER ENHANCE THE ORCA MONSTA ECOSYSTEM. THESE TOKENS CAN BE COMMUNITY CHOSEN, DEVELOPED AS NEEDED, AND IMPLEMENTED BASED ON ECOSYSTEM REQUIREMENTS AND FUTURE DEVELOPMENT PLANS.
+                </p>
+              </div>
             </div>
           </div>
 
