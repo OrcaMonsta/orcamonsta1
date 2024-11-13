@@ -179,7 +179,7 @@ export default function Announcements() {
               TWITTER
             </a>
             <a
-              href="#"
+              href="https://discord.gg/93CMsHcm"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
