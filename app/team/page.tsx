@@ -12,33 +12,19 @@ const cornerstone = localFont({
 export default function Team() {
   const teamMembers = [
     {
-      name: "ALEX WRIGHT",
-      role: "FOUNDER & CEO",
-      description: "BLOCKCHAIN VETERAN WITH 8+ YEARS OF EXPERIENCE IN DEFI DEVELOPMENT AND ECOSYSTEM BUILDING.",
-      expertise: ["BLOCKCHAIN ARCHITECTURE", "TOKENOMICS", "STRATEGIC PLANNING"],
-      image: "/team/member1.jpg" // Add team member images to public/team/
+      name: "JARETT DUNN AKA @STACCoverflow",
+      role: "FOUNDER, CEO & LEAD DEVELOPER",
+      description: "BLOCKCHAIN VETERAN WITH 12+ YEARS OF EXPERIENCE IN DEVELOPMENT AND PROGRAMMING",
+      expertise: ["BLOCKCHAIN ARCHITECTURE", "CODE DEVELOPMENT", "PROGRAMMING"],
+      image: "public/STACC.png" // Add team member images to public/team/
     },
     {
-      name: "SARAH CHEN",
-      role: "LEAD DEVELOPER",
-      description: "SOLANA BLOCKCHAIN SPECIALIST WITH EXTENSIVE EXPERIENCE IN SMART CONTRACT DEVELOPMENT.",
-      expertise: ["SMART CONTRACTS", "PROTOCOL DESIGN", "SECURITY"],
-      image: "/team/member2.jpg"
+      name: "KRYPTTOR",
+      role: "GENERAL MANAGER & DEVELOPER ",
+      description: "OVER 10 YEARS OF EXPERIENCE IN THE CRYPTO SPACE AND 6+ YEARS OF EXPERIENCE IN DEVELOPMENT.",
+      expertise: ["PROJECT MANAGEMENT", "DEVELOPMENT", "DESIGN"],
+      image: "public/Krypttor.png"
     },
-    {
-      name: "MARCUS JOHNSON",
-      role: "HEAD OF OPERATIONS",
-      description: "FORMER FINTECH EXECUTIVE BRINGING TRADITIONAL FINANCE EXPERTISE TO THE DEFI SPACE.",
-      expertise: ["OPERATIONS", "RISK MANAGEMENT", "COMPLIANCE"],
-      image: "/team/member3.jpg"
-    },
-    {
-      name: "ELENA RODRIGUEZ",
-      role: "MARKETING DIRECTOR",
-      description: "CRYPTO MARKETING SPECIALIST WITH A TRACK RECORD OF SUCCESSFUL PROJECT LAUNCHES.",
-      expertise: ["BRAND STRATEGY", "COMMUNITY GROWTH", "PARTNERSHIPS"],
-      image: "/team/member4.jpg"
-    }
   ]
 
   return (
@@ -78,13 +64,38 @@ export default function Team() {
         </h1>
 
         {/* Team Grid */}
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
           {teamMembers.map((member, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
               shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]">
-              {/* Add your member card components here */}
+              {/* Member card components */}
             </div>
           ))}
+        </div>
+
+        {/* Recruitment Disclaimer */}
+        <div className="backdrop-blur-md bg-cyan-500/10 rounded-xl p-6 border border-cyan-500/30
+          shadow-[0_0_30px_rgba(0,255,255,0.1)] mt-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex-shrink-0">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+            </div>
+            <h2 className={`${cornerstone.className} text-xl text-cyan-400`}>
+              JOIN OUR TEAM
+            </h2>
+          </div>
+          <div className={`${cornerstone.className} text-gray-300 space-y-2`}>
+            <p>
+              WE ARE ACTIVELY RECRUITING NEW MEMBERS TO JOIN OUR GROWING TEAM. AS WE EXPAND, NEW TEAM MEMBERS 
+              WILL BE ANNOUNCED ON OUR <Link href="/announcements" className="text-cyan-400 hover:text-cyan-300 transition-colors">ANNOUNCEMENTS PAGE</Link> AND 
+              SOCIAL MEDIA PROFILES.
+            </p>
+            <p>
+              IF YOU'RE INTERESTED IN JOINING THE ORCA MONSTA TEAM, PLEASE REACH OUT THROUGH OUR <Link href="/contact" 
+              className="text-cyan-400 hover:text-cyan-300 transition-colors">CONTACT PAGE</Link> OR 
+              CONNECT WITH US ON OUR SOCIAL MEDIA PLATFORMS.
+            </p>
+          </div>
         </div>
       </div>
     </main>
