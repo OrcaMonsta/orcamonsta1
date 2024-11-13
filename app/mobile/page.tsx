@@ -29,7 +29,7 @@ const MobilePage = () => {
       ]
     },
     { name: "Candour", href: "/candour" },
-    { name: "NFTs", href: "/under-construction" },
+    { name: "NFTs", href: "/nfts" },
     { name: "Gobbler", href: "/gobbler" },
     { name: "Community", href: "/community" },
     { name: "Announcements", href: "/announcements" },
