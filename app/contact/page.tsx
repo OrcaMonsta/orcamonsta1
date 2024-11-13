@@ -119,7 +119,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 mb-8">
               <div>
                 <input
                   type="text"
@@ -164,8 +164,8 @@ export default function Contact() {
               </button>
             </form>
 
-            {/* Social Links */}
-            <div className="flex flex-wrap justify-center gap-6">
+            {/* Social Links with added top margin */}
+            <div className="flex flex-wrap justify-center gap-6 mt-8 pt-8 border-t border-gray-800/50">
               <a
                 href="https://t.me/orca_monsta"
                 target="_blank"
