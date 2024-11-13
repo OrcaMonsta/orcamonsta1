@@ -84,9 +84,15 @@ export default function Roadmap() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
-        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-12 text-center`}>
+        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-4 text-center`}>
           {roadmapContent.title}
         </h1>
+        
+        {/* Mobile Disclaimer */}
+        <p className={`${cornerstone.className} text-gray-400 text-sm text-center mb-12 
+          backdrop-blur-md bg-black/30 mx-auto max-w-md rounded-lg py-2 px-4 border border-gray-800/50`}>
+          THIS ROADMAP IS BEST VIEWED HORIZONTALLY ON MOBILE DEVICES
+        </p>
 
         {/* Visual Roadmap Timeline */}
         <div className="relative mb-16">
