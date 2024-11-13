@@ -125,6 +125,17 @@ const aboutContent = {
   }
 }
 
+// Standard bullet point component to use everywhere
+const LaserBullet = () => (
+  <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
+    <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent group-hover:from-cyan-400/70 transition-all duration-300" />
+    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
+      <div className="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300" />
+      <div className="absolute inset-[2px] bg-cyan-400/40 rounded-full animate-pulse" />
+    </div>
+  </div>
+);
+
 export default function About() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -174,13 +185,7 @@ export default function About() {
               <div className="space-y-4">
                 {aboutContent.introduction.content.map((text, index) => (
                   <div key={index} className={`${cornerstone.className} text-gray-300 flex items-start group`}>
-                    <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
-                      <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent group-hover:from-cyan-400/70 transition-all duration-300" />
-                      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
-                        <div className="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300" />
-                        <div className="absolute inset-[2px] bg-cyan-400/40 rounded-full animate-pulse" />
-                      </div>
-                    </div>
+                    <LaserBullet />
                     <span className="mt-1">{text}</span>
                   </div>
                 ))}
@@ -207,13 +212,7 @@ export default function About() {
                   <div className="space-y-2">
                     {token.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className={`${cornerstone.className} text-gray-300 flex items-start group`}>
-                        <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
-                          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-green-500/50 to-transparent group-hover:from-green-400/70 transition-all duration-300" />
-                          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
-                            <div className="absolute inset-0 bg-green-500/20 rounded-full group-hover:bg-green-400/30 transition-all duration-300" />
-                            <div className="absolute inset-[2px] bg-green-400/40 rounded-full animate-pulse" />
-                          </div>
-                        </div>
+                        <LaserBullet />
                         <span className="mt-1">{feature}</span>
                       </div>
                     ))}
@@ -244,13 +243,7 @@ export default function About() {
             <div className="space-y-4">
               {aboutContent.technology.features.map((feature, index) => (
                 <div key={index} className={`${cornerstone.className} text-gray-300 flex items-start group`}>
-                  <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
-                    <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent group-hover:from-cyan-400/70 transition-all duration-300" />
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
-                      <div className="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300" />
-                      <div className="absolute inset-[2px] bg-cyan-400/40 rounded-full animate-pulse" />
-                    </div>
-                  </div>
+                  <LaserBullet />
                   <span className="mt-1">{feature}</span>
                 </div>
               ))}
@@ -273,13 +266,7 @@ export default function About() {
                   <div className="space-y-3">
                     {section.points.map((point, pointIndex) => (
                       <div key={pointIndex} className={`${cornerstone.className} text-gray-300 flex items-start group`}>
-                        <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
-                          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-green-500/50 to-transparent group-hover:from-green-400/70 transition-all duration-300" />
-                          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
-                            <div className="absolute inset-0 bg-green-500/20 rounded-full group-hover:bg-green-400/30 transition-all duration-300" />
-                            <div className="absolute inset-[2px] bg-green-400/40 rounded-full animate-pulse" />
-                          </div>
-                        </div>
+                        <LaserBullet />
                         <span className="mt-1">{point}</span>
                       </div>
                     ))}
@@ -299,13 +286,7 @@ export default function About() {
             <div className="space-y-4">
               {aboutContent.vision.content.map((text, index) => (
                 <div key={index} className={`${cornerstone.className} text-gray-300 flex items-start group`}>
-                  <div className="flex-shrink-0 w-6 mr-4 mt-[0.9rem] relative">
-                    <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500/50 to-transparent group-hover:from-cyan-400/70 transition-all duration-300" />
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2">
-                      <div className="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/30 transition-all duration-300" />
-                      <div className="absolute inset-[2px] bg-cyan-400/40 rounded-full animate-pulse" />
-                    </div>
-                  </div>
+                  <LaserBullet />
                   <span className="mt-1">{text}</span>
                 </div>
               ))}
