@@ -180,7 +180,10 @@ export default function Ecosystem() {
           transform transition-all duration-300">
           
           <h2 className={`${cornerstone.className} text-2xl font-bold text-green-400 mb-6`}>
-           ORCA MONSTA WHIRLPOOL ECOSYSTEM STRUCTURE which ECOSYTEM TOKENS WILL BE IMPLEMENTED INTO
+           ORCA MONSTA WHIRLPOOL ECOSYSTEM STRUCTURE 
+          </h2>
+          <h2>
+          (which NEW ECOSYTEM TOKENS WILL BE INCORPORATED AND IMPLEMENTED INTO)
           </h2>
           
           <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
