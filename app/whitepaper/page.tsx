@@ -12,72 +12,76 @@ const cornerstone = localFont({
 export default function Whitepaper() {
   const sections = [
     {
-      title: "TOKENOMICS",
+      title: "INTRODUCTION & VISION",
       content: [
         {
-          subtitle: "TOKEN DISTRIBUTION",
+          subtitle: "WELCOME TO ORCA",
           details: [
-            "TOTAL SUPPLY: 1,000,000,000 $ORCA",
-            "LIQUIDITY POOL: 40%",
-            "ECOSYSTEM FUND: 20%",
-            "TEAM ALLOCATION: 10%",
-            "MARKETING: 15%",
-            "COMMUNITY REWARDS: 15%"
+            "DESIGNED FOR FAIRNESS AND TRANSPARENCY",
+            "REWARDS TOP 50 HOLDERS WITH TRADE FEES",
+            "COMMUNITY-DRIVEN ECONOMY",
+            "LOYALTY AND PARTICIPATION REWARDS",
+            "STRONG, SUPPORTIVE NETWORK"
           ]
         },
         {
-          subtitle: "TRANSACTION FEES",
+          subtitle: "HOW IT WORKS",
           details: [
-            "2% REDISTRIBUTED TO HOLDERS",
-            "2% ADDED TO LIQUIDITY",
-            "1% ECOSYSTEM DEVELOPMENT",
-            "1% MARKETING OPERATIONS"
+            "FEE DISTRIBUTION FROM ON-CHAIN TRANSACTIONS",
+            "PROPORTIONAL DISTRIBUTION TO TOP 50 HOLDERS",
+            "RANDOMIZED INTERVAL DISTRIBUTIONS",
+            "TRANSPARENT BLOCKCHAIN VERIFICATION",
+            "AUTOMATED REWARD SYSTEM"
           ]
         }
       ]
     },
     {
-      title: "TECHNOLOGY",
+      title: "TOKENOMICS & BENEFITS",
       content: [
         {
-          subtitle: "SMART CONTRACTS",
+          subtitle: "TOKEN METRICS",
           details: [
-            "SOLANA BLOCKCHAIN INTEGRATION",
-            "AUTOMATED LIQUIDITY MANAGEMENT",
-            "SECURE TRANSACTION PROCESSING",
-            "OPTIMIZED GAS EFFICIENCY"
+            "TOTAL SUPPLY: 913,000,000 ORCA",
+            "FAIRLAUNCH - NO PRE-MINES",
+            "NO INSIDER ALLOCATIONS",
+            "DYNAMIC FEES: 0.15% - 5% PER TRADE",
+            "VOLUME-BASED FEE DISTRIBUTION"
           ]
         },
         {
-          subtitle: "SECURITY FEATURES",
+          subtitle: "HOLDER BENEFITS",
           details: [
-            "MULTI-SIGNATURE WALLETS",
-            "TIME-LOCKED CONTRACTS",
-            "AUTOMATED AUDITING",
-            "REAL-TIME MONITORING"
+            "PASSIVE INCOME FOR TOP HOLDERS",
+            "ENHANCED COMMUNITY ENGAGEMENT",
+            "LONG-TERM HOLDING INCENTIVES",
+            "SELF-SUSTAINING ECOSYSTEM",
+            "CONTINUOUS TRADING REWARDS"
           ]
         }
       ]
     },
     {
-      title: "ECOSYSTEM",
+      title: "ROADMAP & FUTURE",
       content: [
         {
-          subtitle: "DEFI INTEGRATION",
+          subtitle: "DEVELOPMENT PHASES",
           details: [
-            "YIELD FARMING PROTOCOLS",
-            "STAKING MECHANISMS",
-            "CROSS-CHAIN BRIDGES",
-            "LIQUIDITY POOLS"
+            "PHASE 1: COMMUNITY LAUNCH & SOCIAL MEDIA",
+            "PHASE 2: FEE DISTRIBUTION IMPLEMENTATION",
+            "PHASE 3: PARTNERSHIP EXPANSION",
+            "PHASE 4: CONTINUOUS IMPROVEMENTS",
+            "ONGOING COMMUNITY FEEDBACK INTEGRATION"
           ]
         },
         {
-          subtitle: "GOVERNANCE",
+          subtitle: "ECOSYSTEM GROWTH",
           details: [
-            "COMMUNITY VOTING SYSTEM",
-            "PROPOSAL SUBMISSION",
-            "TRANSPARENT EXECUTION",
-            "DECENTRALIZED DECISIONS"
+            "EXPANDING PARTNERSHIPS",
+            "PLATFORM INTEGRATIONS",
+            "COMMUNITY GOVERNANCE",
+            "ENHANCED UTILITY",
+            "MARKET EXPANSION"
           ]
         }
       ]

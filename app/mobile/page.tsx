@@ -23,7 +23,7 @@ const MobilePage = () => {
         { name: "About", href: "/about" },
         { name: "How it works", href: "/how-it-works" },
         { name: "Roadmap", href: "/roadmap" },
-        { name: "Whitepaper", href: "/under-construction" },
+        { name: "Whitepaper", href: "/whitepaper" },
         { name: "Team", href: "/under-construction" },
         { name: "Ecosystem", href: "/under-construction" }
       ]
