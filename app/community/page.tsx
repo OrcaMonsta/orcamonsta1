@@ -118,6 +118,34 @@ export default function Community() {
           </motion.div>
         </div>
 
+        {/* Community Voting */}
+        <div className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
+          shadow-[0_0_50px_rgba(0,255,255,0.1)] mb-12">
+          <h2 className={`${cornerstone.className} text-2xl text-green-400 mb-6`}>
+            COMMUNITY VOTING
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="text-gray-300">
+              <p className="mb-4">
+                AT ORCA MONSTA, WE BELIEVE IN COMMUNITY-DRIVEN DECISION MAKING. THIS SECTION WILL BE USED FOR IMPORTANT COMMUNITY POLLS AND VOTING ON KEY DECISIONS THAT AFFECT OUR ECOSYSTEM.
+              </p>
+              <div className="backdrop-blur-md bg-black/20 rounded-lg p-6 border border-gray-800/30">
+                <div className={`${cornerstone.className} text-cyan-400 text-xl mb-4`}>
+                  NO ACTIVE POLLS
+                </div>
+                <p className="text-gray-400">
+                  THERE ARE CURRENTLY NO ACTIVE POLLS. STAY TUNED FOR UPCOMING VOTES ON ECOSYSTEM DEVELOPMENTS, FEATURE IMPLEMENTATIONS, AND COMMUNITY INITIATIVES.
+                </p>
+                <div className="mt-6 flex items-center gap-2">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                  <span className="text-gray-400">FUTURE POLLS WILL BE ANNOUNCED IN OUR COMMUNITY CHANNELS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Community Guidelines */}
         <div className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
           shadow-[0_0_50px_rgba(0,255,255,0.1)] mb-12">
@@ -168,34 +196,6 @@ export default function Community() {
                 <li>• Educational content</li>
                 <li>• Community voting rights</li>
               </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Community Voting */}
-        <div className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
-          shadow-[0_0_50px_rgba(0,255,255,0.1)] mt-12">
-          <h2 className={`${cornerstone.className} text-2xl text-green-400 mb-6`}>
-            COMMUNITY VOTING
-          </h2>
-          
-          <div className="space-y-6">
-            <div className="text-gray-300">
-              <p className="mb-4">
-                AT ORCA MONSTA, WE BELIEVE IN COMMUNITY-DRIVEN DECISION MAKING. THIS SECTION WILL BE USED FOR IMPORTANT COMMUNITY POLLS AND VOTING ON KEY DECISIONS THAT AFFECT OUR ECOSYSTEM.
-              </p>
-              <div className="backdrop-blur-md bg-black/20 rounded-lg p-6 border border-gray-800/30">
-                <div className={`${cornerstone.className} text-cyan-400 text-xl mb-4`}>
-                  NO ACTIVE POLLS
-                </div>
-                <p className="text-gray-400">
-                  THERE ARE CURRENTLY NO ACTIVE POLLS. STAY TUNED FOR UPCOMING VOTES ON ECOSYSTEM DEVELOPMENTS, FEATURE IMPLEMENTATIONS, AND COMMUNITY INITIATIVES.
-                </p>
-                <div className="mt-6 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                  <span className="text-gray-400">FUTURE POLLS WILL BE ANNOUNCED IN OUR COMMUNITY CHANNELS</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
