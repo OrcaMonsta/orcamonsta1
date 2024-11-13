@@ -104,7 +104,7 @@ export default function Community() {
               transform transition-all duration-300"
           >
             <h2 className={`${cornerstone.className} text-2xl text-green-400 mb-4`}>DISCORD</h2>
-            <p className="text-gray-300 mb-4">Join our Discord server for community events and support and even more discussion and collaboration.</p>
+            <p className="text-gray-300 mb-4">Join our Discord server for community events, support and even more collaboration.</p>
             <a 
               href="https://discord.gg/93CMsHcm" 
               target="_blank"
