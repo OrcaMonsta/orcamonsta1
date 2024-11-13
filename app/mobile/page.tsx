@@ -28,7 +28,7 @@ const MobilePage = () => {
         { name: "Ecosystem", href: "/under-construction" }
       ]
     },
-    { name: "Candour", href: "/under-construction" },
+    { name: "Candour", href: "/candour" },
     { name: "NFTs", href: "/under-construction" },
     { name: "Gobbler", href: "/gobbler" },
     { name: "Community", href: "/community" },
