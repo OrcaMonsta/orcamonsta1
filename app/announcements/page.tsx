@@ -13,21 +13,33 @@ const cornerstone = localFont({
 // Sample announcements data
 const announcements = [
   {
-    date: "2024-03-20",
+    date: "2024-10-30",
     title: "PLATFORM LAUNCH ANNOUNCEMENT",
     content: "We are excited to announce the official launch of the Orca Monsta platform...",
     category: "LAUNCH",
     important: true
   },
   {
-    date: "2024-03-18",
+    date: "2024-11-01",
+    title: "ECOSYSTEM TOKENS LAUNCHED",
+    content: "$SUPASEXI and $LOUIS XIV launched with automated algorithmically stable market makers to implement stability, increase volume, fees and rewards for users.",
+    category: "LAUNCH",
+    important: true
+  },
+  {
+    date: "2024-11-01",
     title: "COMMUNITY REWARDS PROGRAM",
-    content: "Introducing our new community rewards program with exciting benefits...",
+    content: "Introducing our new community rewards program with continous benefits for holders. Fees generated from daily trading volume will be distributed to holders proportionally.",
     category: "COMMUNITY",
     important: false
-  },
-  // Add more announcements as needed
+  }
 ]
+
+// Add this function at the top of your component to format the current date
+const getCurrentDate = () => {
+  const date = new Date();
+  return date.toISOString().split('T')[0]; // Returns date in YYYY-MM-DD format
+};
 
 export default function Announcements() {
   return (
@@ -62,9 +74,14 @@ export default function Announcements() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
-        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-8`}>
+        <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-4`}>
           ANNOUNCEMENTS
         </h1>
+        
+        {/* Add current date display */}
+        <div className={`${cornerstone.className} text-xl text-gray-400 mb-8`}>
+          CURRENT DATE: {getCurrentDate()}
+        </div>
 
         {/* Announcements List */}
         <div className="space-y-6">
@@ -125,6 +142,16 @@ export default function Announcements() {
                 transition-all duration-300"
             >
               TWITTER
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
+                border border-cyan-500/50 rounded-lg hover:shadow-[0_0_30px_rgba(0,255,255,0.3)]
+                transition-all duration-300"
+            >
+              DISCORD
             </a>
           </div>
         </div>
