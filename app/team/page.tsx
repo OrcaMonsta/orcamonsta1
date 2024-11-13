@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import localFont from 'next/font/local'
 
 const cornerstone = localFont({ 
@@ -15,15 +16,15 @@ export default function Team() {
       name: "JARETT DUNN AKA @STACCoverflow",
       role: "FOUNDER, CEO & LEAD DEVELOPER",
       description: "BLOCKCHAIN VETERAN WITH 12+ YEARS OF EXPERIENCE IN DEVELOPMENT AND PROGRAMMING",
-      expertise: ["BLOCKCHAIN ARCHITECTURE", "CODE DEVELOPMENT", "PROGRAMMING"],
-      image: "public/STACC.png" // Add team member images to public/team/
+      expertise: ["BLOCKCHAIN ARCHITECTURE", "CODE DEVELOPMENT", "PROGRAMMING", "IMPLEMENTATION"],
+      image: "/STACC.png"
     },
     {
       name: "KRYPTTOR",
       role: "GENERAL MANAGER & DEVELOPER ",
-      description: "OVER 10 YEARS OF EXPERIENCE IN THE CRYPTO SPACE AND 6+ YEARS OF EXPERIENCE IN DEVELOPMENT.",
-      expertise: ["PROJECT MANAGEMENT", "DEVELOPMENT", "DESIGN"],
-      image: "public/Krypttor.png"
+      description: "OVER 10 YEARS OF EXPERIENCE IN THE CRYPTO SPACE AND 6+ YEARS OF EXPERIENCE IN DEVELOPMENT AND PROGRAMMING.",
+      expertise: ["PROJECT MANAGEMENT", "DEVELOPMENT", "PROGRAMMING", "DESIGN"],
+      image: "/Krypttor.png"
     },
   ]
 
@@ -68,6 +69,17 @@ export default function Team() {
           {teamMembers.map((member, index) => (
             <div key={index} className="backdrop-blur-md bg-black/30 rounded-xl p-8 border border-gray-800/50 
               shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]">
+              {/* Image Container */}
+              <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              
               {/* Member Name */}
               <h2 className={`${cornerstone.className} text-2xl text-green-400 mb-2`}>
                 {member.name}
