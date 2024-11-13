@@ -24,8 +24,8 @@ export default function Home() {
         { name: "How it works", href: "/how-it-works" },
         { name: "Roadmap", href: "/roadmap" },
         { name: "Whitepaper", href: "/whitepaper" },
-        { name: "Team", href: "/under-construction" },
-        { name: "Ecosystem", href: "/under-construction" }
+        { name: "Team", href: "/team" },
+        { name: "Ecosystem", href: "/ecosystem" }
       ]
     },
     { name: "Candour", href: "/candour" },

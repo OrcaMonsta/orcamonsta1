@@ -24,7 +24,7 @@ export default function Team() {
       role: "GENERAL MANAGER & DEVELOPER ",
       description: "OVER 10 YEARS OF EXPERIENCE IN THE CRYPTO SPACE, 6+ YEARS OF EXPERIENCE IN DEVELOPMENT & PROGRAMMING.",
       expertise: ["PROJECT MANAGEMENT", "DEVELOPMENT", "PROGRAMMING", "DESIGN"],
-      image: "/Krypttor.png"
+      image: "/Krypttor.jpeg"
     },
   ]
 
