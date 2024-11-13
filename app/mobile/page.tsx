@@ -286,62 +286,68 @@ const MobilePage = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center gap-6 py-4">
-            {/* Social Links - DexScreener */}
-            <a 
-              href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
-            >
-              <div className="w-5 h-5 relative">
-                <Image
-                  src="/dexscreener.png"
-                  alt="DexScreener"
-                  fill
-                  className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
-                  style={{
-                    filter: 'brightness(0.8)',
-                    opacity: '0.8'
-                  }}
-                  priority
-                />
-              </div>
-              <span>DexScreener</span>
-            </a>
-            <a 
-              href="https://x.com/OrcaMonsta" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-blue-400 transition-colors duration-300 flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-              Twitter
-            </a>
-            <a 
-              href="https://t.me/orca_monsta" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.411-.168.56-.505 1.287-.832 1.287-.319 0-.607-.297-.866-.53-.484-.434-2.747-1.791-3.267-2.151-.52-.36-1.013-.538-.505-1.287.507-.749 2.306-2.156 3.267-3.079.292-.28.558-.792-.053-.792s-2.179 1.372-3.267 2.151c-1.088.779-2.036.805-2.906.531-.87-.274-1.665-.531-1.665-.531s-.585-.234-.319-.766c.266-.532 1.665-1.287 1.665-1.287s2.473-1.019 4.239-1.688c1.766-.669 3.452-.938 3.825-.938.373 0 1.114.134.93.851z"/>
-              </svg>
-              Telegram
-            </a>
-            <a 
-              href="https://discord.com/invite/93CMsHcm" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-purple-400 transition-colors duration-300 flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
-              </svg>
-              Discord
-            </a>
+          <div className="flex flex-col gap-4 py-4 px-4">
+            {/* Top Row - DexScreener and Twitter */}
+            <div className="flex justify-center items-center gap-8">
+              <a 
+                href="https://dexscreener.com/solana/CaLyryATQhnVZaau425zAJ9fNf4uNWVa1GKD6JN94AX9" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group whitespace-nowrap"
+              >
+                <div className="w-5 h-5 relative flex-shrink-0">
+                  <Image
+                    src="/dexscreener.png"
+                    alt="DexScreener"
+                    fill
+                    className="object-contain transition-all duration-300 group-hover:brightness-125 group-hover:opacity-100"
+                    style={{
+                      filter: 'brightness(0.8)',
+                      opacity: '0.8'
+                    }}
+                    priority
+                  />
+                </div>
+                <span>DexScreener</span>
+              </a>
+              <a 
+                href="https://x.com/OrcaMonsta" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-blue-400 transition-colors duration-300 flex items-center gap-2 whitespace-nowrap"
+              >
+                <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                Twitter
+              </a>
+            </div>
+
+            {/* Bottom Row - Telegram and Discord */}
+            <div className="flex justify-center items-center gap-8">
+              <a 
+                href="https://t.me/orca_monsta" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 whitespace-nowrap"
+              >
+                <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.411-.168.56-.505 1.287-.832 1.287-.319 0-.607-.297-.866-.53-.484-.434-2.747-1.791-3.267-2.151-.52-.36-1.013-.538-.505-1.287.507-.749 2.306-2.156 3.267-3.079.292-.28.558-.792-.053-.792s-2.179 1.372-3.267 2.151c-1.088.779-2.036.805-2.906.531-.87-.274-1.665-.531-1.665-.531s-.585-.234-.319-.766c.266-.532 1.665-1.287 1.665-1.287s2.473-1.019 4.239-1.688c1.766-.669 3.452-.938 3.825-.938.373 0 1.114.134.93.851z"/>
+                </svg>
+                Telegram
+              </a>
+              <a 
+                href="https://discord.com/invite/93CMsHcm" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-purple-400 transition-colors duration-300 flex items-center gap-2 whitespace-nowrap"
+              >
+                <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                </svg>
+                Discord
+              </a>
+            </div>
           </div>
 
           {/* Terms and Privacy Links */}
