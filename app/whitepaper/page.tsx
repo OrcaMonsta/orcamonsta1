@@ -9,6 +9,20 @@ const cornerstone = localFont({
   variable: '--font-cornerstone'
 })
 
+// Add this function to handle the PDF download
+const handleDownload = () => {
+  // Direct link to your PDF file in the public folder
+  const pdfUrl = '/whitepaper.pdf';
+  
+  // Create a link element
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = 'Orca_Monsta_Whitepaper.pdf'; // Name of the file when downloaded
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export default function Whitepaper() {
   const sections = [
     {
@@ -42,11 +56,12 @@ export default function Whitepaper() {
         {
           subtitle: "TOKEN METRICS",
           details: [
-            "TOTAL SUPPLY: 913,000,000 ORCA",
+            "TOTAL SUPPLY: 999,000,000 ORCA",
             "FAIRLAUNCH - NO PRE-MINES",
             "NO INSIDER ALLOCATIONS",
             "DYNAMIC FEES: 0.15% - 5% PER TRADE",
-            "VOLUME-BASED FEE DISTRIBUTION"
+            "VOLUME-BASED FEE DISTRIBUTION",
+            "BURN FUNCTION TO REDUCE TOTAL SUPPLY"
           ]
         },
         {
@@ -171,9 +186,12 @@ export default function Whitepaper() {
 
         {/* Download Section */}
         <div className="mt-8 text-center">
-          <button className={`${cornerstone.className} px-8 py-4 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
-            border border-cyan-500/50 rounded-xl hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] 
-            transition-all duration-300`}>
+          <button 
+            onClick={handleDownload}
+            className={`${cornerstone.className} px-8 py-4 bg-gradient-to-r from-cyan-500/20 to-green-500/20 
+              border border-cyan-500/50 rounded-xl hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] 
+              transition-all duration-300`}
+          >
             DOWNLOAD FULL WHITEPAPER PDF
           </button>
         </div>
