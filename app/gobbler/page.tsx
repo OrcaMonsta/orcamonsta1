@@ -52,25 +52,6 @@ export default function Gobbler() {
         </Link>
       </nav>
 
-      {/* Disclaimer Banner - Add this right after the navigation */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 mb-8">
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="backdrop-blur-md bg-cyan-500/10 rounded-xl p-6 border border-cyan-500/30
-            shadow-[0_0_30px_rgba(0,255,255,0.1)]"
-        >
-          <div className="flex items-center gap-3">
-            <div className="flex-shrink-0">
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-            </div>
-            <p className={`${cornerstone.className} text-cyan-400`}>
-              DEVELOPMENT NOTICE: GOBBLER AMM IS CURRENTLY UNDER DEVELOPMENT. CHECK BACK SOON FOR PUBLIC RELEASE ANNOUNCEMENTS.
-            </p>
-          </div>
-        </motion.div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
         <h1 className={`${cornerstone.className} text-4xl font-bold text-cyan-400 mb-8`}>
