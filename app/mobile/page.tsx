@@ -25,15 +25,17 @@ const MobilePage = () => {
         { name: "Roadmap", href: "/roadmap" },
         { name: "Whitepaper", href: "/whitepaper" },
         { name: "Team", href: "/team" },
+        { name: "Gobbler", href: "/gobbler" },
         { name: "Ecosystem", href: "/ecosystem" }
       ]
     },
+    { name: "Partenerships", href: "/under-construction" },
     { name: "Candour", href: "/candour" },
     { name: "NFTs", href: "/nfts" },
-    { name: "Gobbler", href: "/gobbler" },
     { name: "Community", href: "/community" },
     { name: "Announcements", href: "/announcements" },
-    { name: "Contact", href: "/contact" }
+    { name: "Contact", href: "/contact" },
+    { name: "FAQ", href: "/under-construction" }
   ];
 
   const copyToClipboard = () => {
