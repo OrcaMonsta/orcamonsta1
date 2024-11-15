@@ -84,11 +84,26 @@ export default function Whitepaper() {
         {
           subtitle: "DEVELOPMENT PHASES",
           details: [
-            "PHASE 1: FOUNDATION\nLAUNCH, FEE DISTRIBUTION, COMMUNITY BUILDING",
-            "PHASE 2: EXPANSION\nNEW TOKENS, NFT DEVELOPMENT, PARTNERSHIPS",
-            "PHASE 3: INNOVATION\nECOSYSTEM GROWTH, GOVERNANCE, REWARDS",
-            "PHASE 4: MATURITY\nFULL INTEGRATION, ADVANCED FEATURES, GLOBAL EXPANSION",
-            "PHASE 5: IMPROVEMENTS\nCONTINUOUS DEVELOPMENT & ENHANCEMENTS"
+            <span key="1">
+              PHASE 1: FOUNDATION<br/>
+              LAUNCH, FEE DISTRIBUTION, COMMUNITY BUILDING
+            </span>,
+            <span key="2">
+              PHASE 2: EXPANSION<br/>
+              NEW TOKENS, NFT DEVELOPMENT, PARTNERSHIPS
+            </span>,
+            <span key="3">
+              PHASE 3: INNOVATION<br/>
+              ECOSYSTEM GROWTH, GOVERNANCE, REWARDS
+            </span>,
+            <span key="4">
+              PHASE 4: MATURITY<br/>
+              FULL INTEGRATION, ADVANCED FEATURES, GLOBAL EXPANSION
+            </span>,
+            <span key="5">
+              PHASE 5: IMPROVEMENTS<br/>
+              CONTINUOUS DEVELOPMENT & ENHANCEMENTS
+            </span>
           ]
         },
         {
@@ -171,13 +186,8 @@ export default function Whitepaper() {
                       </h3>
                       <ul className="space-y-3">
                         {subsection.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-start gap-3">
-                            <svg className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" 
-                              fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span className={`${cornerstone.className} text-gray-300`}>{detail}</span>
+                          <li key={detailIndex} className={`${cornerstone.className} text-gray-300`}>
+                            {detail}
                           </li>
                         ))}
                       </ul>
