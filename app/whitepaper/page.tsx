@@ -101,7 +101,7 @@ export default function Whitepaper() {
             "MARKET & COMMUNITY EXPANSION",
             "IMPLEMENTATION OF NFTS",
             "INCREASED VOLUME & TRADING ACTIVITY",
-            "PARTNERSHIP WITH DEXES & EXCHANGES"
+            "PROMOTIONS WITH DEXES & EXCHANGES"
           ]
         }
       ]
