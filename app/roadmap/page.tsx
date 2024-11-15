@@ -145,9 +145,10 @@ export default function Roadmap() {
                   >
                     {/* Current Phase Label - Only shows for current phase */}
                     {index === CURRENT_PHASE && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 
+                      <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2 
                         bg-gradient-to-r from-cyan-500 to-green-500 rounded-full
-                        text-xs text-white font-bold animate-pulse">
+                        text-sm text-white font-bold shadow-[0_0_20px_rgba(0,255,255,0.3)]
+                        animate-bounce">
                         CURRENT PHASE
                       </div>
                     )}
@@ -178,24 +179,24 @@ export default function Roadmap() {
 
                 {/* Timeline Node */}
                 <div className="w-16 relative flex items-center justify-center">
-                  <div className={`w-8 h-8 rounded-full backdrop-blur-md flex items-center justify-center group
+                  <div className={`w-12 h-12 rounded-full backdrop-blur-md flex items-center justify-center group
                     animate-fadeIn ${index === CURRENT_PHASE 
-                      ? 'border-2 border-cyan-500 bg-cyan-500/20' 
+                      ? 'border-4 border-cyan-500 bg-cyan-500/30 shadow-[0_0_30px_rgba(0,255,255,0.5)]' 
                       : 'border border-gray-800/50 bg-black/30'}`}
                     style={{
                       animationDelay: `${index * 200}ms`
                     }}
                   >
-                    <div className={`w-4 h-4 rounded-full ${index === CURRENT_PHASE 
+                    <div className={`w-6 h-6 rounded-full ${index === CURRENT_PHASE 
                       ? 'bg-cyan-400 animate-ping' 
                       : 'bg-cyan-400/40 animate-pulse'} 
                       group-hover:bg-green-400/40 transition-all duration-300`} />
                   </div>
                   {/* Progress Line for Current Phase */}
                   {index === CURRENT_PHASE && (
-                    <div className="absolute left-1/2 h-24 w-1 -translate-x-1/2">
-                      <div className="h-full bg-gradient-to-b from-cyan-500 to-transparent 
-                        animate-pulse rounded-full" />
+                    <div className="absolute left-1/2 h-32 w-2 -translate-x-1/2">
+                      <div className="h-full bg-gradient-to-b from-cyan-500 via-cyan-500/50 to-transparent 
+                        animate-pulse rounded-full shadow-[0_0_20px_rgba(0,255,255,0.3)]" />
                     </div>
                   )}
                 </div>
