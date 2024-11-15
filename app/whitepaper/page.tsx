@@ -33,21 +33,101 @@ export default function Whitepaper() {
         {
           subtitle: "WELCOME TO ORCA",
           details: [
-            "DESIGNED FOR FAIRNESS AND TRANSPARENCY",
-            "REWARDS TOP 50 HOLDERS WITH TRADE FEES",
-            "COMMUNITY-DRIVEN ECONOMY",
-            "LOYALTY AND PARTICIPATION REWARDS",
-            "STRONG, SUPPORTIVE NETWORK"
+            <div key="1" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>DESIGNED FOR FAIRNESS AND TRANSPARENCY</span>
+            </div>,
+            <div key="2" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>REWARDS TOP 50 HOLDERS WITH TRADE FEES</span>
+            </div>,
+            <div key="3" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>COMMUNITY-DRIVEN ECONOMY</span>
+            </div>,
+            <div key="4" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>LOYALTY AND PARTICIPATION REWARDS</span>
+            </div>,
+            <div key="5" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>STRONG, SUPPORTIVE NETWORK</span>
+            </div>
           ]
         },
         {
           subtitle: "HOW IT WORKS",
           details: [
-            "FEE DISTRIBUTION FROM ON-CHAIN TRANSACTIONS",
-            "PROPORTIONAL DISTRIBUTION TO TOP 50 HOLDERS",
-            "RANDOMIZED INTERVAL DISTRIBUTIONS",
-            "TRANSPARENT BLOCKCHAIN VERIFICATION",
-            "AUTOMATED REWARD SYSTEM"
+            <div key="1" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>FEE DISTRIBUTION FROM ON-CHAIN TRANSACTIONS</span>
+            </div>,
+            <div key="2" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PROPORTIONAL DISTRIBUTION TO TOP 50 HOLDERS</span>
+            </div>,
+            <div key="3" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>RANDOMIZED INTERVAL DISTRIBUTIONS</span>
+            </div>,
+            <div key="4" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>TRANSPARENT BLOCKCHAIN VERIFICATION</span>
+            </div>,
+            <div key="5" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>AUTOMATED REWARD SYSTEM</span>
+            </div>
           ]
         }
       ]
@@ -58,22 +138,110 @@ export default function Whitepaper() {
         {
           subtitle: "TOKEN METRICS",
           details: [
-            "TOTAL SUPPLY: 999,000,000 ORCA",
-            "FAIRLAUNCH - NO PRE-MINES",
-            "NO INSIDER ALLOCATIONS",
-            "DYNAMIC FEES: 0.15% - 5% PER TRADE",
-            "VOLUME-BASED FEE DISTRIBUTION",
-            "BURN FUNCTION TO REDUCE TOTAL SUPPLY"
+            <div key="1" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>TOTAL SUPPLY: 999,000,000 ORCA</span>
+            </div>,
+            <div key="2" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>FAIRLAUNCH - NO PRE-MINES</span>
+            </div>,
+            <div key="3" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>NO INSIDER ALLOCATIONS</span>
+            </div>,
+            <div key="4" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>DYNAMIC FEES: 0.15% - 5% PER TRADE</span>
+            </div>,
+            <div key="5" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>VOLUME-BASED FEE DISTRIBUTION</span>
+            </div>,
+            <div key="6" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>BURN FUNCTION TO REDUCE TOTAL SUPPLY</span>
+            </div>
           ]
         },
         {
           subtitle: "HOLDER BENEFITS",
           details: [
-            "PASSIVE INCOME FOR TOP HOLDERS",
-            "ENHANCED COMMUNITY ENGAGEMENT",
-            "LONG-TERM HOLDING INCENTIVES",
-            "SELF-SUSTAINING ECOSYSTEM",
-            "CONTINUOUS TRADING REWARDS"
+            <div key="1" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PASSIVE INCOME FOR TOP HOLDERS</span>
+            </div>,
+            <div key="2" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>ENHANCED COMMUNITY ENGAGEMENT</span>
+            </div>,
+            <div key="3" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>LONG-TERM HOLDING INCENTIVES</span>
+            </div>,
+            <div key="4" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>SELF-SUSTAINING ECOSYSTEM</span>
+            </div>,
+            <div key="5" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>CONTINUOUS TRADING REWARDS</span>
+            </div>
           ]
         }
       ]
@@ -84,39 +252,133 @@ export default function Whitepaper() {
         {
           subtitle: "DEVELOPMENT PHASES",
           details: [
-            <span key="1">
-              PHASE 1: FOUNDATION<br/>
-              LAUNCH, FEE DISTRIBUTION, COMMUNITY BUILDING
-            </span>,
-            <span key="2">
-              PHASE 2: EXPANSION<br/>
-              NEW TOKENS, NFT DEVELOPMENT, PARTNERSHIPS
-            </span>,
-            <span key="3">
-              PHASE 3: INNOVATION<br/>
-              ECOSYSTEM GROWTH, GOVERNANCE, REWARDS
-            </span>,
-            <span key="4">
-              PHASE 4: MATURITY<br/>
-              FULL INTEGRATION, ADVANCED FEATURES, GLOBAL EXPANSION
-            </span>,
-            <span key="5">
-              PHASE 5: IMPROVEMENTS<br/>
-              CONTINUOUS DEVELOPMENT & ENHANCEMENTS
-            </span>
+            <div key="1" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PHASE 1: FOUNDATION<br/>
+                LAUNCH, FEE DISTRIBUTION, COMMUNITY BUILDING</span>
+            </div>,
+            <div key="2" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PHASE 2: EXPANSION<br/>
+                NEW TOKENS, NFT DEVELOPMENT, PARTNERSHIPS</span>
+            </div>,
+            <div key="3" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PHASE 3: INNOVATION<br/>
+                ECOSYSTEM GROWTH, GOVERNANCE, REWARDS</span>
+            </div>,
+            <div key="4" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PHASE 4: MATURITY<br/>
+                FULL INTEGRATION, ADVANCED FEATURES, GLOBAL EXPANSION</span>
+            </div>,
+            <div key="5" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PHASE 5: IMPROVEMENTS<br/>
+                CONTINUOUS DEVELOPMENT & ENHANCEMENTS</span>
+            </div>
           ]
         },
         {
           subtitle: "ECOSYSTEM GROWTH",
           details: [
-            "EXPANDING PARTNERSHIPS",
-            "PLATFORM INTEGRATIONS",
-            "COMMUNITY GOVERNANCE",
-            "ENHANCED UTILITY",
-            "MARKET & COMMUNITY EXPANSION",
-            "IMPLEMENTATION OF NFTS",
-            "INCREASED VOLUME & TRADING ACTIVITY",
-            "PROMOTIONS WITH DEXES & EXCHANGES"
+            <div key="1" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>EXPANDING PARTNERSHIPS</span>
+            </div>,
+            <div key="2" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>PLATFORM INTEGRATIONS</span>
+            </div>,
+            <div key="3" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>COMMUNITY GOVERNANCE</span>
+            </div>,
+            <div key="4" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>ENHANCED UTILITY</span>
+            </div>,
+            <div key="5" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>MARKET & COMMUNITY EXPANSION</span>
+            </div>,
+            <div key="6" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>IMPLEMENTATION OF NFTS</span>
+            </div>,
+            <div key="7" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>INCREASED VOLUME & TRADING ACTIVITY</span>
+            </div>,
+            <div key="8" className="flex items-start">
+              <div className="flex-shrink-0 w-4 mr-3 mt-[0.6rem] relative">
+                <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/50 to-transparent 
+                  group-hover:from-cyan-400/70 transition-all duration-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 
+                  bg-cyan-400/40 rounded-full animate-pulse" />
+              </div>
+              <span>DEX, KEY OPINION LEADERS & COMMUNITY PROMOTIONS</span>
+            </div>
           ]
         }
       ]
