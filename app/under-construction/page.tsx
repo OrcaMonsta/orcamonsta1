@@ -41,7 +41,7 @@ export default function UnderConstruction() {
       Looking forward to updates!
     `.trim();
 
-    window.location.href = `mailto:OrcaMonsta@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:support@orcamonsta.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
