@@ -9,6 +9,8 @@ const cornerstone = localFont({
   variable: '--font-cornerstone'
 })
 
+const CURRENT_PHASE = 1; // Index 1 represents Phase 2 (0-based indexing)
+
 export default function Roadmap() {
   // Using the same roadmap content from aboutContent
   const roadmapContent = {
@@ -110,7 +112,7 @@ export default function Roadmap() {
         {/* Mobile Disclaimer */}
         <p className={`${cornerstone.className} text-gray-400 text-sm text-center mb-12 
           backdrop-blur-md bg-black/30 mx-auto max-w-md rounded-lg py-2 px-4 border border-gray-800/50`}>
-          THIS ROADMAP IS BEST VIEWED HORIZONTALLY ON MOBILE DEVICES
+          ROADMAP BEST VIEWED HORIZONTALLY ON MOBILE DEVICES
         </p>
 
         {/* Visual Roadmap Timeline */}
@@ -131,14 +133,26 @@ export default function Roadmap() {
               >
                 {/* Content Box */}
                 <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <div className="backdrop-blur-md bg-black/30 rounded-xl p-6 border border-gray-800/50 
-                    shadow-[0_0_50px_rgba(0,255,255,0.1)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
-                    transform transition-all duration-300 group hover:scale-105 animate-fadeIn"
+                  <div className={`backdrop-blur-md bg-black/30 rounded-xl p-6 border 
+                    ${index === CURRENT_PHASE 
+                      ? 'border-cyan-500/50 shadow-[0_0_50px_rgba(0,255,255,0.3)]' 
+                      : 'border-gray-800/50 shadow-[0_0_50px_rgba(0,255,255,0.1)]'}
+                    hover:shadow-[0_0_80px_rgba(0,255,255,0.2)]
+                    transform transition-all duration-300 group hover:scale-105 animate-fadeIn`}
                     style={{
                       animationDelay: `${index * 200}ms`
                     }}
                   >
-                    <h3 className={`${cornerstone.className} text-xl font-bold text-cyan-400 mb-4`}>
+                    {/* Current Phase Label - Only shows for current phase */}
+                    {index === CURRENT_PHASE && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 
+                        bg-gradient-to-r from-cyan-500 to-green-500 rounded-full
+                        text-xs text-white font-bold animate-pulse">
+                        CURRENT PHASE
+                      </div>
+                    )}
+                    <h3 className={`${cornerstone.className} text-xl font-bold 
+                      ${index === CURRENT_PHASE ? 'text-cyan-400' : 'text-cyan-400'} mb-4`}>
                       {phase.name}
                     </h3>
                     <div className="space-y-3">
@@ -164,16 +178,26 @@ export default function Roadmap() {
 
                 {/* Timeline Node */}
                 <div className="w-16 relative flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-black/30 border border-gray-800/50 
-                    backdrop-blur-md flex items-center justify-center group
-                    animate-fadeIn"
+                  <div className={`w-8 h-8 rounded-full backdrop-blur-md flex items-center justify-center group
+                    animate-fadeIn ${index === CURRENT_PHASE 
+                      ? 'border-2 border-cyan-500 bg-cyan-500/20' 
+                      : 'border border-gray-800/50 bg-black/30'}`}
                     style={{
                       animationDelay: `${index * 200}ms`
                     }}
                   >
-                    <div className="w-4 h-4 rounded-full bg-cyan-400/40 animate-pulse 
-                      group-hover:bg-green-400/40 transition-all duration-300" />
+                    <div className={`w-4 h-4 rounded-full ${index === CURRENT_PHASE 
+                      ? 'bg-cyan-400 animate-ping' 
+                      : 'bg-cyan-400/40 animate-pulse'} 
+                      group-hover:bg-green-400/40 transition-all duration-300`} />
                   </div>
+                  {/* Progress Line for Current Phase */}
+                  {index === CURRENT_PHASE && (
+                    <div className="absolute left-1/2 h-24 w-1 -translate-x-1/2">
+                      <div className="h-full bg-gradient-to-b from-cyan-500 to-transparent 
+                        animate-pulse rounded-full" />
+                    </div>
+                  )}
                 </div>
 
                 {/* Empty space for opposite side */}
