@@ -29,7 +29,6 @@ export default function Home() {
         { name: "Ecosystem", href: "/ecosystem" }
       ]
     },
-    { name: "Partenerships", href: "/under-construction" },
     { name: "Candour", href: "/candour" },
     { name: "NFTs", href: "/nfts" },
     { name: "Community", href: "/community" },
